@@ -1,14 +1,32 @@
 {
-  "name": "BackendProject",
-  "version": "0.0.1",
-  "description": "Backend Project",
+  "name": "OpenSourceGuitarPedal",
+  "version": "1.0.0",
+  "description": "An open source platform used for uploading sound effects on a arduino guitar pedal.",
   "main": "app.js",
-  "author": {
-    "name": "Preben Neirijnck",
-    "email": "neirijnck@hotmail.com"
-  },
   "dependencies": {
     "express": "^4.10.4",
     "mongoose": "^3.8.19"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Neirijnck/OpenSourceGuitarPedal.git"
+  },
+  "keywords": [
+    "Open",
+    "Source",
+    "Guitar",
+    "Pedal",
+    "Sounds",
+    "Effects"
+  ],
+  "author": {"Name": "Preben Neirijnck", "Name" : "Pieter Verroken", "Name" : "Nathan van den Hende"},
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Neirijnck/OpenSourceGuitarPedal/issues"
+  },
+  "homepage": "https://github.com/Neirijnck/OpenSourceGuitarPedal"
 }
