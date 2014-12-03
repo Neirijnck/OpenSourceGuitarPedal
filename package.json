@@ -1,0 +1,14 @@
+{
+  "name": "BackendProject",
+  "version": "0.0.1",
+  "description": "Backend Project",
+  "main": "app.js",
+  "author": {
+    "name": "Preben Neirijnck",
+    "email": "neirijnck@hotmail.com"
+  },
+  "dependencies": {
+    "express": "^4.10.4",
+    "mongoose": "^3.8.19"
+  }
+}
