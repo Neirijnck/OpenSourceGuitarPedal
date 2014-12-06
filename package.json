@@ -5,7 +5,10 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.10.4",
-    "mongoose": "^3.8.19"
+    "mongoose": "^3.8.19",
+    "passport": "^0.2.1",
+    "passport-facebook": "~1.0.3",
+    "passport-facebook-token": "^0.3.2"
   },
   "devDependencies": {},
   "scripts": {
@@ -23,7 +26,7 @@
     "Sounds",
     "Effects"
   ],
-  "author": {"Name": "Preben Neirijnck", "Name" : "Pieter Verroken", "Name" : "Nathan van den Hende"},
+  "author": "Preben Neirijnck",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Neirijnck/OpenSourceGuitarPedal/issues"

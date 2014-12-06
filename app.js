@@ -1,6 +1,7 @@
 //Packages
 var express = require('express');
 var mongoose = require('mongoose');
+var passport = require('passport');
 
 //Configure express app
 var app = express();
@@ -15,22 +16,28 @@ mongoose.connect(connectionString);
 
 //Connection callbacks
 mongoose.connection.on('open', function()
-                       {
-                                console.log('Connection met mongoserver: ' + connectionString);
-                                mongoose.connection.db.collectionNames(function(err, names)
-                                                                       {
-                                    console.log('Collection list:');
-                                    console.log(names);
-                                });
-    
+{
+    console.log('Connection met mongoserver: ' + connectionString);
+    mongoose.connection.db.collectionNames(function(err, names)
+    {
+        console.log('Collection list:');
+        console.log(names);
+    });
+
 });
 mongoose.connection.on('error', function(err)
-                       {
-                            console.log(err);
+{
+    console.log(err);
 });
 
-// require the routes
-require('./routes/router')(app, router);
+require('./config/passport')(passport); //Pass passport for configuration
+
+//Config passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+//Require the routes
+require('./routes/router')(app, router, passport);
 
 //Start server
 app.listen(port);
