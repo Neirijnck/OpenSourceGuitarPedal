@@ -1,0 +1,46 @@
+#container {
+    position: relative;
+}
+
+section {
+    min-height: 100vh;
+}
+
+#first {
+     background-image: url('../images/crowdblur.jpg');
+     position: relative;
+}
+        
+#first   > #overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /*background-color: rgba(200,50,50,0.8);*/
+}
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: calc(25% - 1.5em);
+    font-size: 5em;
+}
+            
+#first  #arrowDown {
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    background-color: green;
+    margin: 0 auto;
+    font-size: 5em;
+    bottom: 25px;
+    left: 50%;
+    right: 50%;
+}
+
+#second {
+    background-image: url('../images/pattern.png');
+}
+
+#second #svgguitar {
+    max-width: 15%;
+    transform: rotate(30deg);
+}
