@@ -15,7 +15,6 @@ module.exports = function(app, router, passport)
     //Homepage
     router.get('/', function(req, res)
     {
-        //res.json({"message":"homepage"});
         res.render('index.ejs');
     });
 
