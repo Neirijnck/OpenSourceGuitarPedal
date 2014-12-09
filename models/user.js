@@ -8,7 +8,10 @@ var UserSchema = new Schema(
         email: {type: String, index: { unique: true }},
         password: {type: String},
         userName:{type: String, index: { unique: true }},
-        name:{type: String}
+        name:{type: String},
+        profileUrl:{type: String},
+        photo:{type: String},
+        gender:{type: String}
     }, {collection:"User"});
 
 module.exports = mongoose.model('User', UserSchema);

@@ -13,36 +13,63 @@ module.exports = function(app, router, passport)
     // =====================================
 
     //Homepage
-    router.get('/', function(req, res)
+    router.route('/').get(function(req, res)
     {
         res.render('index.ejs');
     });
 
     //Profile page
-    app.get('/profile', isLoggedIn, function(req, res) {
-        res.render('profile.ejs', {
-            user : req.user // get the user out of session and pass to template
+    router.route('/profile').get(isLoggedIn, function(req, res) {
+
+        console.log(req.user);
+
+        User.findOne(req.user, function(err, user) {
+            console.log(user.email);
+
+            if(err) {
+                console.log(err);
+            } else {
+                res.render('profile.ejs', { user: user});
+            };
+        });
+
+    });
+
+    //Effectspage
+    router.route('/effects').get(function(req,res)
+    {
+        Effect.find(function(err, effects)
+        {
+            if(err){console.log(err);}
+
+            res.render('effects.ejs', {effects : effects})
         });
     });
 
 
-
     // =====================================
-    // FACEBOOK ROUTES =====================
+    // FACEBOOK ROUTES ============
     // =====================================
 
     //Facebook authentication and login
-    app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+    router.route('/auth/facebook').get(
+        passport.authenticate('facebook'), function(err, user, info)
+        {
+            if (err) { console.log(err); }
+            if (!user) { return res.redirect('/'); }
+            req.logIn(user);
+        }
+    );
 
     //Handle the callback after facebook has authenticated the user
-    app.get('/auth/facebook/callback',
+    router.route('/auth/facebook/callback').get(
         passport.authenticate('facebook', {
-            successRedirect : '/profile',
+            successRedirect:'/profile',
             failureRedirect : '/'
         }));
 
     //Route for logging out
-    app.get('/logout', function(req, res) {
+    router.route('/logout').get(function(req, res) {
         req.logout();
         res.redirect('/');
     });
@@ -51,8 +78,9 @@ module.exports = function(app, router, passport)
     function isLoggedIn(req, res, next) {
 
         // if user is authenticated in the session, carry on
-        if (req.isAuthenticated())
-            return next();
+        if (req.isAuthenticated()){
+            console.log('isLoggedIn');
+            return next();}
 
         // if they aren't redirect them to the home page
         res.redirect('/');

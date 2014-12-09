@@ -2,6 +2,8 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var passport = require('passport');
+var favicon = require('serve-favicon');
+var path = require('path');
 
 //Configure express app
 var app = express();
@@ -32,9 +34,11 @@ mongoose.connection.on('error', function(err)
 
 require('./config/passport')(passport); //Pass passport for configuration
 
-//Config passport
+//All environments
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(favicon('./public/images/favicon.ico'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Require the routes
 require('./routes/router')(app, router, passport);
