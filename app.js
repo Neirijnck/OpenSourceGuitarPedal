@@ -4,10 +4,17 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var favicon = require('serve-favicon');
 var path = require('path');
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
 
 //Configure express app
 var app = express();
 var port = process.env.PORT||8080;
+
+// configure bodyParser to Express
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //Configure routers
 var router = express.Router();
@@ -35,6 +42,9 @@ mongoose.connection.on('error', function(err)
 require('./config/passport')(passport); //Pass passport for configuration
 
 //All environments
+app.use(cookieParser());
+app.use(session({ secret: 'guitarpedal', key: 'user', cookie: { maxAge: 60000, secure: false }}));
+app.use(passport.initialize());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(favicon('./public/images/favicon.ico'));

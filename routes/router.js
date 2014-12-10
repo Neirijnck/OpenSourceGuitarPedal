@@ -30,21 +30,48 @@ module.exports = function(app, router, passport)
                 console.log(err);
             } else {
                 res.render('profile.ejs', { user: user});
-            };
+            }
         });
-
     });
 
     //Effectspage
-    router.route('/effects').get(function(req,res)
-    {
-        Effect.find(function(err, effects)
-        {
-            if(err){console.log(err);}
+    router.route('/effects')
 
-            res.render('effects.ejs', {effects : effects})
+        //Get all effects
+        .get(function(req,res)
+        {
+            Effect.find(function(err, effects)
+            {
+                if(err){console.log(err);}
+
+                res.render('effects.ejs', {effects : effects})
+            });
         });
-    });
+
+    //New effect page
+    router.route('/neweffect')
+
+        .get(function(req,res)
+        {
+            Type.find(function(err, types)
+            {
+                if(err){console.log(err);}
+
+                res.render('neweffect.ejs', {types: types});
+            })
+        })
+
+        .post(function(req, res)
+        {
+            var effect = new Effect(req.body);
+
+            effect.save(function(err) {
+                if (err)
+                    return res.send(err);
+
+                res.json({ status: 200, message: 'Succes' });
+            });
+        });
 
 
     // =====================================
@@ -81,6 +108,7 @@ module.exports = function(app, router, passport)
         if (req.isAuthenticated()){
             console.log('isLoggedIn');
             return next();}
+        console.log("isAuthenticated is false");
 
         // if they aren't redirect them to the home page
         res.redirect('/');
@@ -113,4 +141,4 @@ module.exports = function(app, router, passport)
     });
 
     app.use('/', router);
-}
+};
