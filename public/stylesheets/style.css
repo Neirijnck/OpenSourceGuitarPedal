@@ -44,3 +44,75 @@ h1 {
     max-width: 15%;
     transform: rotate(30deg);
 }
+
+
+
+.panel-heading {
+   padding: 5px;
+    padding-bottom: 15px;
+}
+
+
+
+.ef-name {
+    font-size: 2em;
+    float: left;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+.ef-item {
+    padding: 0;
+}
+
+.ef-item-inner {
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+#ef-effects {
+    background: url('../images/pattern.png');
+    color: black;
+}
+
+.ef-inner{
+    max-width: 995px;
+    margin: 0 auto;
+    width: calc(100% - 20px);
+    min-height: 500px;
+    margin-top: 50px;    
+    padding: 10px 5px 5px;
+}
+
+.ef-rating {
+    text-align: right;
+}
+
+.ef-description {
+    margin-bottom: 20px;
+}
+
+.ef-author {
+    text-align: right;
+}
+
+.ef-author > span {
+    margin-right: 5px;
+}
+
+.ef-type {
+    float: left;
+}
+
+
+.rating {
+    color: #FFD203;
+    font-size: 1.5em;
+}
+
+
+
+
+
+
