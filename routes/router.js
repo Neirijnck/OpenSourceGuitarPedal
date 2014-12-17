@@ -44,7 +44,11 @@ module.exports = function(app, router, passport)
             {
                 if(err){console.log(err);}
 
-                res.render('effects.ejs', {effects : effects})
+                Type.find(function(err, types)
+                {
+                    if(err){console.log(err);}
+                    res.render('effects.ejs', {effects : effects, types : types})
+                });
             });
         });
 
