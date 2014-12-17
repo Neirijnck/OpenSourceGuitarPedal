@@ -42,14 +42,17 @@
                     <li><a href="http://www.google.com">Effects</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/auth/facebook">Sign in with Facebook</a></li>
+                   <% if(!isLoggedIn){ %>
+                    <li><a href="/auth/facebook">Sign in with Facebook</a></li><% }
+                    
+                    else { %>
                     <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle"> Welcome, Pieter <span class="caret"></span></a>
+                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle loggedInDropDown"> Welcome <%= user.name.split(' ')[0] %> <img class="img img-circle nav-user-img" src="<%= user.photo %>" alt=""> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
             <li><a href="profile">Profile</a></li>
             <li><a href="#">Log out</a></li>
                         </ul>
-                    </li>
+                    </li> <% } %>
                 </ul>
                 
             </div><!-- /.navbar-collapse -->

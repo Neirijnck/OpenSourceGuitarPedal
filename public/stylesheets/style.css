@@ -6,6 +6,17 @@ section {
     min-height: 100vh;
 }
 
+.loggedInDropDown.dropdown-toggle[role="button"] {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-user-img {
+    height: 40px;
+    width: 40px;
+    margin: 0;
+}
+
 #first {
      background-image: url('../images/crowdblur.jpg');
      position: relative;
