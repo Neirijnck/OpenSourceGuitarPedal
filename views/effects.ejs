@@ -58,6 +58,18 @@
             <div class="ef-inner">
                <div class="row">
 <div class="btn-group">
+<form action="">
+<div class="input-group">
+ 
+  <input type="text" class="form-control">
+  <div class="input-group-btn">
+    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+  </div>
+</div>
+    </form>
+                   </div>
+                   
+                   <div class="btn-group">
   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
     Types <span class="caret"></span>
   </button>
@@ -67,17 +79,46 @@
 </div>
               <div class="btn-group">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-    Effect <span class="caret"></span>
+    Rating <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Separated link</a></li>
+    <li><a href="#">
+        <span class=" rating fa fa-star"></span>
+        <span class=" rating fa fa-star"></span>
+        <span class=" rating fa fa-star"></span>
+        <span class=" rating fa fa-star"></span>
+        <span class=" rating fa fa-star"></span>
+    </a></li>
+    <li><a href="#">
+        <span class=" rating fa fa-star"></span>
+        <span class=" rating fa fa-star"></span>
+        <span class=" rating fa fa-star"></span>
+        <span class=" rating fa fa-star"></span>
+        <span class=" rating fa fa-star-o"></span>
+    </a></li>
+    <li><a href="#">
+        <span class=" rating fa fa-star"></span>
+        <span class=" rating fa fa-star"></span>
+        <span class=" rating fa fa-star"></span>
+        <span class=" rating fa fa-star-o"></span>
+        <span class=" rating fa fa-star-o"></span>
+    </a></li>
+    <li><a href="#">
+        <span class=" rating fa fa-star"></span>
+        <span class=" rating fa fa-star"></span>
+        <span class=" rating fa fa-star-o"></span>
+        <span class=" rating fa fa-star-o"></span>
+        <span class=" rating fa fa-star-o"></span></a></li>
+    <li><a href="#">
+        <span class=" rating fa fa-star"></span>
+        <span class=" rating fa fa-star-o"></span>
+        <span class=" rating fa fa-star-o"></span>
+        <span class=" rating fa fa-star-o"></span>
+        <span class=" rating fa fa-star-o"></span>
+    </a></li>
   </ul>
 </div>
-              <div class="btn-group">
+<div class="btn-group">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
     Effect <span class="caret"></span>
   </button>
@@ -97,7 +138,7 @@
                     %>
                     <div class="ef-item col-md-4">
                       <div class="ef-item-inner">
-                        <div class="panel panel-primary">
+                        <div class="panel">
                           <div class="panel-heading">
                             <h3 class="panel-title ef-name"><%= effect.name %></h3>
                         <div class="ef-rating">
