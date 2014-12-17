@@ -15,13 +15,27 @@ module.exports = function(app, router, passport)
     //Homepage
     router.route('/').get(function(req, res)
     {
-        res.render('index.ejs');
+        var loggedIn = Boolean(req.isAuthenticated());
+
+        //When logged in, pass user to view
+        if(loggedIn){
+            User.findOne(req.user, function(err, user)
+            {
+                if (err) {
+                    console.log(err);
+                } else {
+                    res.render('index.ejs', {user: user, isLoggedIn: loggedIn});
+                }
+            });
+        }
+        else{res.render('index.ejs', {isLoggedIn: loggedIn});}
     });
 
     //Profile page
     router.route('/profile').get(isLoggedIn, function(req, res) {
 
         console.log(req.user);
+        var loggedIn = Boolean(req.isAuthenticated());
 
         User.findOne(req.user, function(err, user) {
             console.log(user.email);
@@ -29,7 +43,7 @@ module.exports = function(app, router, passport)
             if(err) {
                 console.log(err);
             } else {
-                res.render('profile.ejs', { user: user});
+                res.render('profile.ejs', { user: user, isLoggedIn : loggedIn});
             }
         });
     });
@@ -40,32 +54,75 @@ module.exports = function(app, router, passport)
         //Get all effects
         .get(function(req,res)
         {
-            Effect.find(function(err, effects)
-            {
-                if(err){console.log(err);}
+            var loggedIn = Boolean(req.isAuthenticated());
 
-                Type.find(function(err, types)
+            //When logged in, pass user to view
+            if(loggedIn){
+                User.findOne(req.user, function(err, user)
+                {
+                    if (err) {
+                        console.log(err);
+                    }
+                    else
+                    {
+                        Effect.find(function(err, effects)
+                        {
+                            if(err){console.log(err);}
+
+                            Type.find(function(err, types)
+                            {
+                                if(err){console.log(err);}
+                                res.render('effects.ejs', {effects : effects, types : types, isLoggedIn : loggedIn, user: user})
+                            });
+                        });
+                    }})}
+            else
+            {
+                Effect.find(function(err, effects)
                 {
                     if(err){console.log(err);}
-                    res.render('effects.ejs', {effects : effects, types : types})
+
+                    Type.find(function(err, types)
+                    {
+                        if(err){console.log(err);}
+                        res.render('effects.ejs', {effects : effects, types : types, isLoggedIn : loggedIn})
+                    });
                 });
-            });
+            }
         });
 
     //New effect page
     router.route('/neweffect')
 
-        .get(function(req,res)
+        .get(isLoggedIn, function(req,res)
         {
             Type.find(function(err, types)
             {
-                if(err){console.log(err);}
 
-                res.render('neweffect.ejs', {types: types});
+                var loggedIn = Boolean(req.isAuthenticated());
+                if(loggedIn){
+                    User.findOne(req.user, function(err, user)
+                    {
+                        if (err) {
+                            console.log(err);
+                        }
+                        else
+                        {
+                            if (err) {
+                                console.log(err);
+                            }
+                            res.render('neweffect.ejs', {types: types, isLoggedIn: loggedIn, user: user});
+                        }})}
+                else {
+                    if (err) {
+                        console.log(err);
+                    }
+                    res.render('neweffect.ejs', {types: types, isLoggedIn: loggedIn});
+                }
             })
         })
 
-        .post(function(req, res)
+        .post(isLoggedIn, function(req, res)
         {
             var effect = new Effect(req.body);
 

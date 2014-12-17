@@ -33,7 +33,6 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="/">Home<span class="sr-only">(current)</span></a></li>
-                    <li class="active"><a href="/profile">Profile</a></li>
                     <li><a href="/effects">Effects</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -44,6 +43,7 @@
     <h2>MIJN PROFIEL</h2>
     <h3><%=user.email%></h3>
     <img src="<%=user.photo%>" />
+    <h4><% if(isLoggedIn){%><%=true%><%} %></h4>
 </div>
 </body>
 </html>
