@@ -84,7 +84,7 @@ module.exports = function(app, router, passport)
 
     //Facebook authentication and login
     router.route('/auth/facebook').get(
-        passport.authenticate('facebook'), function(err, user, info)
+        passport.authenticate('facebook', { scope: [ 'email' ] }), function(err, user, info)
         {
             if (err) { console.log(err); }
             if (!user) { return res.redirect('/'); }
@@ -110,7 +110,7 @@ module.exports = function(app, router, passport)
 
         // if user is authenticated in the session, carry on
         if (req.isAuthenticated()){
-            console.log('isLoggedIn');
+            console.log('isLoggedIn=true');
             return next();}
         console.log("isAuthenticated is false");
 
