@@ -9,7 +9,6 @@
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/reset.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
@@ -63,72 +62,61 @@
             <div class="ef-inner">
                <div class="row">
 <div class="btn-group">
-<form action="">
-<div class="input-group">
- 
-  <input type="text" class="form-control">
-  <div class="input-group-btn">
-    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-  </div>
-</div>
-    </form>
-                   </div>
-                   
-                   <div class="btn-group">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-    Types <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="#">All</a></li>
-    <% types.forEach(function(type){ %>
-                   <li><a href="#"><%= type.name %></a></li>
-                    
-                    
-                    <% }); %>
-  </ul>
-</div>
-              <div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-    Rating <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="#">
-        <span class=" rating fa fa-star"></span>
-        <span class=" rating fa fa-star"></span>
-        <span class=" rating fa fa-star"></span>
-        <span class=" rating fa fa-star"></span>
-        <span class=" rating fa fa-star"></span>
-    </a></li>
-    <li><a href="#">
-        <span class=" rating fa fa-star"></span>
-        <span class=" rating fa fa-star"></span>
-        <span class=" rating fa fa-star"></span>
-        <span class=" rating fa fa-star"></span>
-        <span class=" rating fa fa-star-o"></span>
-    </a></li>
-    <li><a href="#">
-        <span class=" rating fa fa-star"></span>
-        <span class=" rating fa fa-star"></span>
-        <span class=" rating fa fa-star"></span>
-        <span class=" rating fa fa-star-o"></span>
-        <span class=" rating fa fa-star-o"></span>
-    </a></li>
-    <li><a href="#">
-        <span class=" rating fa fa-star"></span>
-        <span class=" rating fa fa-star"></span>
-        <span class=" rating fa fa-star-o"></span>
-        <span class=" rating fa fa-star-o"></span>
-        <span class=" rating fa fa-star-o"></span></a></li>
-    <li><a href="#">
-        <span class=" rating fa fa-star"></span>
-        <span class=" rating fa fa-star-o"></span>
-        <span class=" rating fa fa-star-o"></span>
-        <span class=" rating fa fa-star-o"></span>
-        <span class=" rating fa fa-star-o"></span>
-    </a></li>
-  </ul>
-</div>
-<div class="btn-group">
+    <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        Types <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li><a href="#">All</a></li>
+        <% types.forEach(function(type){ %>
+        <li><a href="#"><%= type.name %></a></li>
+
+
+        <% }); %>
+    </ul>
+        </div>
+    <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        Rating <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li><a href="#">
+                <span class=" rating fa fa-star"></span>
+                <span class=" rating fa fa-star"></span>
+                <span class=" rating fa fa-star"></span>
+                <span class=" rating fa fa-star"></span>
+                <span class=" rating fa fa-star"></span>
+            </a></li>
+        <li><a href="#">
+                <span class=" rating fa fa-star"></span>
+                <span class=" rating fa fa-star"></span>
+                <span class=" rating fa fa-star"></span>
+                <span class=" rating fa fa-star"></span>
+                <span class=" rating fa fa-star-o"></span>
+            </a></li>
+        <li><a href="#">
+                <span class=" rating fa fa-star"></span>
+                <span class=" rating fa fa-star"></span>
+                <span class=" rating fa fa-star"></span>
+                <span class=" rating fa fa-star-o"></span>
+                <span class=" rating fa fa-star-o"></span>
+            </a></li>
+        <li><a href="#">
+                <span class=" rating fa fa-star"></span>
+                <span class=" rating fa fa-star"></span>
+                <span class=" rating fa fa-star-o"></span>
+                <span class=" rating fa fa-star-o"></span>
+                <span class=" rating fa fa-star-o"></span></a></li>
+        <li><a href="#">
+                <span class=" rating fa fa-star"></span>
+                <span class=" rating fa fa-star-o"></span>
+                <span class=" rating fa fa-star-o"></span>
+                <span class=" rating fa fa-star-o"></span>
+                <span class=" rating fa fa-star-o"></span>
+            </a></li>
+    </ul>
+        </div>
+    <div class="btn-group" role="group">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
     Effect <span class="caret"></span>
   </button>
@@ -139,7 +127,11 @@
     <li class="divider"></li>
     <li><a href="#">Separated link</a></li>
   </ul>
+        </div>
 </div>
+
+                   <div class="btn-group pull-right" role="group">
+                       <button type="button" class="btn btn-success">Add effect</button>
                </div>
                
                
@@ -246,6 +238,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+   <script src="../javascript/script.js"></script>
 </body>
 </html>
 
