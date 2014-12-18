@@ -13,6 +13,7 @@ var app = express();
 var port = process.env.PORT||8080;
 
 // configure bodyParser to Express
+app.use(bodyParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -45,7 +46,6 @@ require('./config/passport')(passport); //Pass passport for configuration
 app.use(cookieParser());
 app.use(session({ secret: 'guitarpedal', key: 'user', cookie: { maxAge: 60000, secure: false }}));
 app.use(passport.initialize());
-app.use(passport.initialize());
 app.use(passport.session());
 app.use(favicon('./public/images/favicon.ico'));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -54,5 +54,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 require('./routes/router')(app, router, passport);
 
 //Start server
-app.listen(port);
+var server = app.listen(port);
+var io = require('socket.io').listen(server);
+
+//IO
+io.on('connection', function(socket)
+{
+    socket.on('chat message', function(msg)
+    {
+        io.emit('chat message', msg);
+    });
+});
+
 console.log('Server started at http://127.0.0.1: ' + port);

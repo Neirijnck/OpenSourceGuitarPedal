@@ -8,8 +8,7 @@ var EffectSchema = new Schema(
         date:{type: Date, default: Date.now},
         rating:{type: Number},
         type:{type: String},
-        author:{type: String},
-        createdOn: {type: Date}
+        author:{type: String}
     }, {collection:"Effect"});
 
 module.exports = mongoose.model('Effect', EffectSchema);

@@ -59,6 +59,7 @@ module.exports = function(passport)
                         newUser.photo = profile.photos[0].value; // facebook can return multiple photos so we'll take the first
                         newUser.profileUrl = profile.profileUrl;
                         newUser.gender = profile.gender;
+                        //newUser.userName = profile.username;
 
                         // save our user to the database
                         newUser.save(function (err) {

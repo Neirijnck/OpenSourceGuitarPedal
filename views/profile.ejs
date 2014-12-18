@@ -1,62 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Profile</title>
+<% include header.ejs %>
 
-    <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/fa-animation.css">
-
-</head>
 <body>
-<header>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">Brand</a>
-            </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="/">Home<span class="sr-only">(current)</span></a></li>
-                    <li><a href="effects">Effects</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                   <% if(!isLoggedIn){ %>
-                    <li><a href="/auth/facebook">Sign in with Facebook</a></li><% }
-                    
-                    else { %>
-                    <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle loggedInDropDown"> Welcome <%= user.name.split(' ')[0] %> <img class="img img-circle nav-user-img" src="<%= user.photo %>" alt=""> <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-            <li><a href="profile">Profile</a></li>
-            <li><a href="#">Log out</a></li>
-                        </ul>
-                    </li> <% } %>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-</header>
-<div id="container">
-    <h2>MIJN PROFIEL</h2>
-    <h3><%=user.email%></h3>
-    <img src="<%=user.photo%>" />
-    <h4><% if(isLoggedIn){%><%=true%><%} %></h4>
+<% include navigation.ejs%>
+
+
+<div class="container" id="profile-container">
+
+    <section id="profile-column">
+        <div class="center" id="profile-div">
+            <img class="img" src="<%=user.photo%>" />
+            <h3><%=user.name%></h3>
+        </div>
+    </section>
+
+    <script src="/socket.io/socket.io.js" ></script>
+    <script>
+        var socket = io.connect("http://127.0.0.1:8080/");
+        $('form').submit(function()
+        {
+            socket.emit('chat message', $('#m').val());
+            $('#m').val('');
+            return false;
+        });
+        socket.on('chat message', function(msg)
+        {
+            $('messages').append($('<li>').text(msg));
+        });
+    </script>
+
 </div>
 
 

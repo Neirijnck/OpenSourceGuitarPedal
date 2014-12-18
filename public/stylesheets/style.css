@@ -2,10 +2,6 @@
     position: relative;
 }
 
-section {
-    min-height: 100vh;
-}
-
 .loggedInDropDown.dropdown-toggle[role="button"] {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -18,15 +14,15 @@ section {
 }
 
 #first {
-     background-image: url('../images/crowdblur.jpg');
-     position: relative;
+    background-image: url('../images/crowdblur.jpg');
+    position: relative;
 }
-        
+
 #first   > #overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        /*background-color: rgba(200,50,50,0.8);*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(200,50,50,0.8);*/
 }
 h1 {
     text-align: center;
@@ -34,7 +30,7 @@ h1 {
     margin-top: calc(25% - 1.5em);
     font-size: 5em;
 }
-            
+
 #first  #arrowDown {
     position: absolute;
     color: white;
@@ -59,7 +55,7 @@ h1 {
 
 
 .panel-heading {
-   padding: 5px;
+    padding: 5px;
     padding-bottom: 15px;
 }
 
@@ -92,7 +88,7 @@ h1 {
     margin: 0 auto;
     width: calc(100% - 20px);
     min-height: 500px;
-    margin-top: 50px;    
+    margin-top: 50px;
     padding: 10px 5px 5px;
 }
 
@@ -122,8 +118,36 @@ h1 {
     font-size: 1.5em;
 }
 
+#profile-container
+{
+    margin-top: 50px;
+}
 
+#profile-column
+{
+    float: left;
+    height: calc(100vh - 50px);
+    width: 45vh;
+    min-width: 250px;
+    background-color: #bbffbb;
+}
 
+#profile-column img
+{
+    border-radius: 10px;
+    width: 230px;
+    height: 230px;
+}
+
+#profile-div
+{
+    margin-top: 5%;
+}
+
+.center
+{
+    text-align: center;
+}
 
 
 

@@ -24,11 +24,11 @@ module.exports = function(app, router, passport)
                 if (err) {
                     console.log(err);
                 } else {
-                    res.render('index.ejs', {user: user, isLoggedIn: loggedIn});
+                    res.render('index.ejs', {user: user, isLoggedIn: loggedIn, title: 'Home'});
                 }
             });
         }
-        else{res.render('index.ejs', {isLoggedIn: loggedIn});}
+        else{res.render('index.ejs', {isLoggedIn: loggedIn, title: 'Home'});}
     });
 
     //Profile page
@@ -43,7 +43,7 @@ module.exports = function(app, router, passport)
             if(err) {
                 console.log(err);
             } else {
-                res.render('profile.ejs', { user: user, isLoggedIn : loggedIn});
+                res.render('profile.ejs', { user: user, isLoggedIn : loggedIn, title: 'My Profile'});
             }
         });
     });
@@ -72,7 +72,7 @@ module.exports = function(app, router, passport)
                             Type.find(function(err, types)
                             {
                                 if(err){console.log(err);}
-                                res.render('effects.ejs', {effects : effects, types : types, isLoggedIn : loggedIn, user: user})
+                                res.render('effects.ejs', {effects : effects, types : types, isLoggedIn : loggedIn, user: user, title: 'Effects'})
                             });
                         });
                     }})}
@@ -85,7 +85,7 @@ module.exports = function(app, router, passport)
                     Type.find(function(err, types)
                     {
                         if(err){console.log(err);}
-                        res.render('effects.ejs', {effects : effects, types : types, isLoggedIn : loggedIn})
+                        res.render('effects.ejs', {effects : effects, types : types, isLoggedIn : loggedIn, title: 'Effects'})
                     });
                 });
             }
@@ -100,37 +100,44 @@ module.exports = function(app, router, passport)
             {
 
                 var loggedIn = Boolean(req.isAuthenticated());
-                if(loggedIn){
-                    User.findOne(req.user, function(err, user)
+
+                User.findOne(req.user, function(err, user)
+                {
+                    if (err) {
+                        console.log(err);
+                    }
+                    else
                     {
                         if (err) {
                             console.log(err);
                         }
-                        else
-                        {
-                            if (err) {
-                                console.log(err);
-                            }
-                            res.render('neweffect.ejs', {types: types, isLoggedIn: loggedIn, user: user});
-                        }})}
-                else {
-                    if (err) {
-                        console.log(err);
-                    }
-                    res.render('neweffect.ejs', {types: types, isLoggedIn: loggedIn});
-                }
+                        res.render('neweffect.ejs', {types: types, isLoggedIn: loggedIn, user: user, title: 'New Effect'});
+                    }})
             })
         })
 
         .post(isLoggedIn, function(req, res)
         {
-            var effect = new Effect(req.body);
+            User.findOne(req.user, function(err, user) {
+                if (err) {
+                    console.log(err);
+                }
+                else
+                {
+                    var effect = new Effect();
+                    effect.name = req.body.effect.name;
+                    effect.description = req.body.effect.description;
+                    effect.rating = -1; //Default not rated yet
+                    effect.type = req.body.effect.type; //This should be id of the type
+                    effect.author = user.name;
 
-            effect.save(function(err) {
-                if (err)
-                    return res.send(err);
+                    effect.save(function(err) {
+                        if (err)
+                            return res.send(err);
 
-                res.json({ status: 200, message: 'Succes' });
+                        res.redirect('/effects');
+                    });
+                }
             });
         });
 
@@ -152,7 +159,7 @@ module.exports = function(app, router, passport)
     //Handle the callback after facebook has authenticated the user
     router.route('/auth/facebook/callback').get(
         passport.authenticate('facebook', {
-            successRedirect:'/profile',
+            successRedirect:'/',
             failureRedirect : '/'
         }));
 
