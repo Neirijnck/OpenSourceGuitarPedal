@@ -12,6 +12,9 @@ var session = require('express-session');
 var app = express();
 var port = process.env.PORT||8080;
 
+//Set the view engine to ejs
+app.set('view engine', 'ejs');
+
 // configure bodyParser to Express
 app.use(bodyParser());
 app.use(bodyParser.json());
@@ -57,12 +60,22 @@ require('./routes/router')(app, router, passport);
 var server = app.listen(port);
 var io = require('socket.io').listen(server);
 
+
 //IO
 io.on('connection', function(socket)
 {
+    console.log('user connected');
+
+    //Sending message
     socket.on('chat message', function(msg)
     {
         io.emit('chat message', msg);
+    });
+
+    //Disconnecting
+    socket.on('disconnect', function()
+    {
+        console.log('user disconnected');
     });
 });
 

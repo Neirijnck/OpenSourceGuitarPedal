@@ -1,9 +1,14 @@
-<% include header.ejs %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head.ejs %>
+</head>
 
 <body>
 
-<% include navigation.ejs%>
-
+<header>
+    <% include ../partials/header.ejs%>
+</header>
 
 <div class="container" id="profile-container">
 
@@ -14,25 +19,7 @@
         </div>
     </section>
 
-    <script src="/socket.io/socket.io.js" ></script>
-    <script>
-        var socket = io.connect("http://127.0.0.1:8080/");
-        $('form').submit(function()
-        {
-            socket.emit('chat message', $('#m').val());
-            $('#m').val('');
-            return false;
-        });
-        socket.on('chat message', function(msg)
-        {
-            $('messages').append($('<li>').text(msg));
-        });
-    </script>
-
 </div>
-
-
-
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -40,5 +27,6 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="../javascript/script.js"></script>
+
 </body>
 </html>

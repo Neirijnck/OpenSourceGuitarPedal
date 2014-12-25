@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head.ejs %>
+</head>
+
+<body>
+<header>
+    <% include ../partials/header.ejs%>
+</header>
+
+<div class="container" id="new-effect-container">
+
+        <form method="post" action="/neweffect">
+            <div class="form-group">
+            <input type="text" name="effect[name]" class="form-control" placeholder="Name" required>
+            <input type="text" name="effect[description]" class="form-control" placeholder="Description" required>
+            <input type="text" name="effect[type]" class="form-control" placeholder="Type" required>
+            <input type="file" name="effect[file]" class="form-control" accept=".ino">
+            </div>
+            <input type="submit" value="Save" class="btn btn-default">
+        </form>
+
+</div>
+
+</body>

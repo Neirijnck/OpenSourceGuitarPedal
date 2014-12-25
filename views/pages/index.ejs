@@ -1,14 +1,19 @@
-<% include header.ejs %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head.ejs %>
+</head>
 
 <body>
 
-<% include navigation.ejs%>
+<header>
+    <% include ../partials/header.ejs%>
+</header>
 
 <div id="container">
     <section class="page" id="first">
         <div id="overlay" class="faa-parent animated-hover">
             <h1>Arduino Open Source Pedal</h1>
-            <a href="/auth/facebook">Sign in with Facebook</a>
             <a href="#second" id="arrowDown" class="nav fa fa-angle-double-down faa-vertical"></a>
         </div>
     </section>

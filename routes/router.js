@@ -3,6 +3,9 @@ var User = require('../models/user');
 var Effect = require('../models/effect');
 var Type = require('../models/type');
 
+//Modules
+var fs = require('fs');
+
 //Routes
 module.exports = function(app, router, passport)
 {
@@ -24,11 +27,11 @@ module.exports = function(app, router, passport)
                 if (err) {
                     console.log(err);
                 } else {
-                    res.render('index.ejs', {user: user, isLoggedIn: loggedIn, title: 'Home'});
+                    res.render('pages/index.ejs', {user: user, isLoggedIn: loggedIn, title: 'Home'});
                 }
             });
         }
-        else{res.render('index.ejs', {isLoggedIn: loggedIn, title: 'Home'});}
+        else{res.render('pages/index.ejs', {isLoggedIn: loggedIn, title: 'Home'});}
     });
 
     //Profile page
@@ -43,7 +46,7 @@ module.exports = function(app, router, passport)
             if(err) {
                 console.log(err);
             } else {
-                res.render('profile.ejs', { user: user, isLoggedIn : loggedIn, title: 'My Profile'});
+                res.render('pages/profile.ejs', { user: user, isLoggedIn : loggedIn, title: 'My Profile'});
             }
         });
     });
@@ -72,7 +75,7 @@ module.exports = function(app, router, passport)
                             Type.find(function(err, types)
                             {
                                 if(err){console.log(err);}
-                                res.render('effects.ejs', {effects : effects, types : types, isLoggedIn : loggedIn, user: user, title: 'Effects'})
+                                res.render('pages/effects.ejs', {effects : effects, types : types, isLoggedIn : loggedIn, user: user, title: 'Effects'})
                             });
                         });
                     }})}
@@ -85,11 +88,13 @@ module.exports = function(app, router, passport)
                     Type.find(function(err, types)
                     {
                         if(err){console.log(err);}
-                        res.render('effects.ejs', {effects : effects, types : types, isLoggedIn : loggedIn, title: 'Effects'})
+                        res.render('pages/effects.ejs', {effects : effects, types : types, isLoggedIn : loggedIn, title: 'Effects'})
                     });
                 });
             }
         });
+
+
 
     //New effect page
     router.route('/neweffect')
@@ -111,7 +116,7 @@ module.exports = function(app, router, passport)
                         if (err) {
                             console.log(err);
                         }
-                        res.render('neweffect.ejs', {types: types, isLoggedIn: loggedIn, user: user, title: 'New Effect'});
+                        res.render('pages/neweffect.ejs', {types: types, isLoggedIn: loggedIn, user: user, title: 'New Effect'});
                     }})
             })
         })
@@ -130,6 +135,16 @@ module.exports = function(app, router, passport)
                     effect.rating = -1; //Default not rated yet
                     effect.type = req.body.effect.type; //This should be id of the type
                     effect.author = user.name;
+
+                    fs.readFile(req.body.effect.file, function (err, data) {
+                        // ...
+                        console.log(data);
+                        var newPath = __dirname + "/uploads/uploadedFileName";
+                        fs.writeFile(newPath, data, function (err)
+                        {
+                            //res.redirect("back");
+                        });
+                    });
 
                     effect.save(function(err) {
                         if (err)

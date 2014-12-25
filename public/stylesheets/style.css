@@ -1,3 +1,8 @@
+body
+{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 #container {
     position: relative;
 }
@@ -118,6 +123,58 @@ h1 {
     font-size: 1.5em;
 }
 
+#chat
+{
+    position: absolute;
+    top:8.3%;
+    right: 0.85%;
+    height: 50vh;
+    width: 32vh;
+    background-color: deepskyblue;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+#chat h3, p
+{
+    text-align: center;
+}
+
+#chatDiv
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#chatForm
+{
+    position:absolute;
+    bottom: 7%;
+}
+
+#messagesDiv
+{
+    margin-left: 1.5%;
+    width: 96.5%;
+    height: 64%;
+    border-radius: 5px;
+    border: solid 2px white;
+}
+
+#m
+{
+    width: 23vh;
+    margin-left: 1.5%;
+}
+
+#messages
+{
+    list-style: none;
+    padding-left: 4%;
+    padding-top: 2%;
+}
+
 #profile-container
 {
     margin-top: 50px;
@@ -147,6 +204,11 @@ h1 {
 .center
 {
     text-align: center;
+}
+
+#new-effect-container
+{
+    margin-top: 60px;
 }
 
 
