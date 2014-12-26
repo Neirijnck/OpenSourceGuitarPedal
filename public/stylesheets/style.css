@@ -7,6 +7,10 @@ body
     position: relative;
 }
 
+.mainsection {
+    height: 100vh;
+}
+
 .loggedInDropDown.dropdown-toggle[role="button"] {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -89,9 +93,10 @@ h1 {
 }
 
 .ef-inner{
-    max-width: 995px;
-    margin: 0 auto;
-    width: calc(100% - 20px);
+    max-width: calc(96% - 230px);
+    /*margin: 0 auto;*/
+    margin-left: 2%;
+    width: calc(96% - 230px);
     min-height: 500px;
     margin-top: 50px;
     padding: 10px 5px 5px;
@@ -120,24 +125,24 @@ h1 {
 
 .rating {
     color: #FFD203;
-    font-size: 1.5em;
+    font-size: 18px;
 }
 
 #chat
 {
-    position: absolute;
-    top:8.3%;
-    right: 0.85%;
-    height: 50vh;
-    width: 32vh;
-    background-color: deepskyblue;
-    border-radius: 5px;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    height: calc(100vh - 50px);
+    width: 230px;
+    background-color: #222;
     z-index: 100;
 }
 
 #chat h3, p
 {
     text-align: center;
+    color: white;
 }
 
 #chatDiv
@@ -150,29 +155,51 @@ h1 {
 #chatForm
 {
     position:absolute;
-    bottom: 7%;
+    bottom: 5%;
+    width: 250px;
 }
 
 #messagesDiv
 {
     margin-left: 1.5%;
     width: 96.5%;
-    height: 64%;
+    height: calc(100% - 140px);
     border-radius: 5px;
     border: solid 2px white;
+    overflow-y: scroll;
 }
 
 #m
 {
-    width: 23vh;
+    width: 188px;
     margin-left: 1.5%;
 }
 
 #messages
 {
     list-style: none;
-    padding-left: 4%;
     padding-top: 2%;
+    padding-left: 0%;
+    color: white;
+}
+
+#messages > li {
+    padding-left: 2%;
+}
+
+#messages > li:nth-of-type(2n){
+    background-color:  #333;
+    
+} 
+
+#sendMessageButton {
+    background-color: transparent;
+    border: 0px solid transparent;
+    color: white;
+    width: 33px;
+    height: 33px;
+    padding: 0;
+    
 }
 
 #profile-container
