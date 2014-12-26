@@ -27,7 +27,7 @@ module.exports = function(passport)
         clientID        : configAuth.facebookAuth.clientID,
         clientSecret    : configAuth.facebookAuth.clientSecret,
         callbackURL     : configAuth.facebookAuth.callbackURL,
-        profileFields: ['id', 'name', 'profileUrl', 'picture.type(large)', 'emails', 'gender']
+        profileFields: ['id', 'name', 'profileUrl', 'picture.type(large)', 'emails', 'gender', 'location', 'birthday']
     },
 
         // facebook will send back the token and profile
@@ -59,6 +59,8 @@ module.exports = function(passport)
                         newUser.photo = profile.photos[0].value; // facebook can return multiple photos so we'll take the first
                         newUser.profileUrl = profile.profileUrl;
                         newUser.gender = profile.gender;
+                        newUser.birthday = profile.birthday;
+                        newUser.location = profile.location;
                         //newUser.userName = profile.username;
 
                         // save our user to the database
