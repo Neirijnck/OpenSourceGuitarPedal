@@ -40,11 +40,11 @@
 
 
                 <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        Types <span class="caret"></span>
+                    <button type="button" class="btn btn-default dropdown-toggle dropdown-type" data-toggle="dropdown" aria-expanded="false">
+                        <span class="ef-chosen">All types</span> <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">All</a></li>
+                    <ul class="dropdown-menu " role="menu">
+                        <li><a href="#">All types</a></li>
                         <% types.forEach(function(type){ %>
                         <li><a href="#"><%= type.name %></a></li>
 
@@ -53,10 +53,11 @@
                     </ul>
                 </div>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        Rating <span class="caret"></span>
+                    <button type="button" class="btn btn-default dropdown-toggle dropdown-rating" data-toggle="dropdown" aria-expanded="false">
+                        <span class="ef-chosen">Any rating</span> <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Any rating</a></li>
                         <li><a href="#">
                                 <span class=" rating fa fa-star"></span>
                                 <span class=" rating fa fa-star"></span>
@@ -90,9 +91,6 @@
                                 <span class=" rating fa fa-star-o"></span>
                                 <span class=" rating fa fa-star-o"></span>
                                 <span class=" rating fa fa-star-o"></span>
-                            </a></li>
-                        <li><a href="#">
-                                Any rating
                             </a></li>
                     </ul>
                 </div>
