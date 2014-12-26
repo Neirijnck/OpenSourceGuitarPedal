@@ -7,6 +7,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
+var multer = require('multer');
 
 //Configure express app
 var app = express();
@@ -52,6 +53,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(favicon('./public/images/favicon.ico'));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(multer({dest:'./uploads/', rename: function (fieldname, filename) {
+    return filename + Date.now()
+}}));
 
 //Require the routes
 require('./routes/router')(app, router, passport);

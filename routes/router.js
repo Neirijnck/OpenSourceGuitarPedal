@@ -10,7 +10,6 @@ var fs = require('fs');
 module.exports = function(app, router, passport)
 {
 
-
     // =====================================
     // PAGES =====================
     // =====================================
@@ -43,10 +42,16 @@ module.exports = function(app, router, passport)
         User.findOne(req.user, function(err, user) {
             console.log(user.email);
 
-            if(err) {
+            if(err)
+            {
                 console.log(err);
-            } else {
-                res.render('pages/profile.ejs', { user: user, isLoggedIn : loggedIn, title: 'My Profile'});
+            } else
+            {
+                Effect.find({}).where('name').equals(user.name).exec(function(err, myEffects)
+                {
+                    console.log(myEffects);
+                    res.render('pages/profile.ejs', {user: user, isLoggedIn: loggedIn, title: 'My Profile', myEffects: myEffects});
+                });
             }
         });
     });
@@ -135,18 +140,10 @@ module.exports = function(app, router, passport)
                     effect.rating = -1; //Default not rated yet
                     effect.type = req.body.effect.type; //This should be id of the type
                     effect.author = user.name;
+                    effect.file = req.files.fileEffect.name;
 
-                    fs.readFile(req.body.effect.file, function (err, data) {
-                        // ...
-                        console.log(data);
-                        var newPath = __dirname + "/uploads/uploadedFileName";
-                        fs.writeFile(newPath, data, function (err)
-                        {
-                            //res.redirect("back");
-                        });
-                    });
-
-                    effect.save(function(err) {
+                    effect.save(function(err)
+                    {
                         if (err)
                             return res.send(err);
 
@@ -163,7 +160,7 @@ module.exports = function(app, router, passport)
 
     //Facebook authentication and login
     router.route('/auth/facebook').get(
-        passport.authenticate('facebook', { scope: [ 'email' ] }), function(err, user, info)
+        passport.authenticate('facebook', { session: true, scope: [ 'email', 'user_birthday' ] }), function(err, user, info)
         {
             if (err) { console.log(err); }
             if (!user) { return res.redirect('/'); }
@@ -174,6 +171,7 @@ module.exports = function(app, router, passport)
     //Handle the callback after facebook has authenticated the user
     router.route('/auth/facebook/callback').get(
         passport.authenticate('facebook', {
+            session: true,
             successRedirect:'/',
             failureRedirect : '/'
         }));

@@ -11,16 +11,29 @@
 
 <div class="container" id="new-effect-container">
 
-        <form method="post" action="/neweffect">
-            <div class="form-group">
-            <input type="text" name="effect[name]" class="form-control" placeholder="Name" required>
-            <input type="text" name="effect[description]" class="form-control" placeholder="Description" required>
-            <input type="text" name="effect[type]" class="form-control" placeholder="Type" required>
-            <input type="file" name="effect[file]" class="form-control" accept=".ino">
-            </div>
-            <input type="submit" value="Save" class="btn btn-default">
-        </form>
+    <form method="post" action="/neweffect" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="text"  class="form-control" placeholder="Name" required="true" name="effect[name]">
+            <input type="text" class="form-control" placeholder="Description" required="true" name="effect[description]">
+
+            <select name="effect[type]" class="form-control" required="true">
+                <% types.forEach(function(type){ %>
+                <option value="<%= type._id %>"><%= type.name %></option>
+                <%});%>
+            </select>
+
+            <input type="file" class="form-control" accept=".ino, .zip" required="true" name="fileEffect">
+        </div>
+        <input type="submit" value="Save" class="btn btn-default">
+    </form>
 
 </div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="../javascript/script.js"></script>
 
 </body>

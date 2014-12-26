@@ -1,6 +1,7 @@
 body
 {
     font-family: 'Source Sans Pro', sans-serif;
+    color: #505050;
 }
 
 #container {
@@ -61,14 +62,21 @@ h1 {
     transform: rotate(30deg);
 }
 
+#third
+{
+    background-image: url('../images/background2.png');
+    background-size: 100%;
+}
 
+#fourth
+{
+    background-color: deepskyblue;
+}
 
 .panel-heading {
     padding: 5px;
     padding-bottom: 15px;
 }
-
-
 
 .ef-name {
     font-size: 2em;
@@ -207,13 +215,64 @@ h1 {
     margin-top: 50px;
 }
 
+#profile-container h3
+{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 #profile-column
 {
     float: left;
+    margin-left: 5%;
     height: calc(100vh - 50px);
-    width: 45vh;
+    width: 38vh;
     min-width: 250px;
-    background-color: #bbffbb;
+}
+
+.profile-icon
+{
+    margin-right: 3%;
+}
+
+#userPicture
+{
+    margin-left: 7.5%;
+    width: 85%;
+    height: 30%;
+    border-bottom: solid 1px #9d9d9d;
+}
+
+#titleName
+{
+    margin-top: 4%;
+}
+
+#userProps
+{
+    margin-left: 8%;
+}
+
+#profile-effects
+{
+    float: left;
+    height: calc(100vh - 50px);
+    width: 70%;
+    min-width:750px;
+}
+
+#effects
+{
+    margin: 1.80%;
+    width: 96%;
+    height: 95%;
+    border-radius: 10px;
+}
+
+#effects h3
+{
+    margin: 2%;
+    border-bottom: solid 1px #9d9d9d;
 }
 
 #profile-column img

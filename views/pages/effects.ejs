@@ -47,8 +47,6 @@
                         <li><a href="#">All types</a></li>
                         <% types.forEach(function(type){ %>
                         <li><a href="#"><%= type.name %></a></li>
-
-
                         <% }); %>
                     </ul>
                 </div>
@@ -141,7 +139,7 @@
                             </div>
                             <div class="panel-body">
                                 <div class="ef-description"><%= effect.description %></div>
-                                <div class="ef-type"><%= effect.type %></div>
+                                <div class="ef-type"><%= types.forEach(function(type){if(effect.type==type.id){type.name}}) %></div>
                                 <div class="ef-author"><span class="glyphicon glyphicon-user">  </span><%= effect.author %></div>
                             </div>
                         </div>
