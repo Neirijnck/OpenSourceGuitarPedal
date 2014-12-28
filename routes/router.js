@@ -34,27 +34,37 @@ module.exports = function(app, router, passport)
     });
 
     //Profile page
-    router.route('/profile').get(isLoggedIn, function(req, res) {
+    router.route('/profile')
 
-        console.log(req.user);
-        var loggedIn = Boolean(req.isAuthenticated());
+        .get(isLoggedIn, function(req, res) {
 
-        User.findOne(req.user, function(err, user) {
-            console.log(user.email);
+            console.log(req.user);
+            var loggedIn = Boolean(req.isAuthenticated());
 
-            if(err)
-            {
-                console.log(err);
-            } else
-            {
-                Effect.find({}).where('name').equals(user.name).exec(function(err, myEffects)
+            User.findOne(req.user, function(err, user) {
+                console.log(user.email);
+
+                if(err)
                 {
-                    console.log(myEffects);
-                    res.render('pages/profile.ejs', {user: user, isLoggedIn: loggedIn, title: 'My Profile', myEffects: myEffects});
-                });
-            }
+                    console.log(err);
+                } else
+                {
+                    Effect.find({author:user.name}).exec(function(err, myEffects)
+                    {
+                        res.render('pages/profile.ejs', {user: user, isLoggedIn: loggedIn, title: 'My Profile', myEffects: myEffects});
+                    });
+                }
+            });
+        })
+
+        //Delete own effect
+        .post(isLoggedIn, function(req, res)
+        {
+            var effectID = req.body.effect._id;
+            console.log(effectID);
+            //Effect.find({_id: effectID}).remove();
         });
-    });
+
 
     //Effectspage
     router.route('/effects')
@@ -97,8 +107,21 @@ module.exports = function(app, router, passport)
                     });
                 });
             }
-        });
+        })
 
+        //Download selected effect
+        .post(function(req, res)
+        {
+            var effectID = req.body.effect._id;
+            console.log(effectID);
+            Effect.find({_id: effectID}).exec(function(err, effect)
+            {
+                console.log(effect);
+                var path = './uploads/' + effect.file;
+                console.log(path);
+                //res.download(path);
+            });
+        });
 
 
     //New effect page
