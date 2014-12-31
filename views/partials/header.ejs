@@ -26,10 +26,10 @@
 
                     else { %>
                     <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle loggedInDropDown"> Welcome <%= user.name.split(' ')[0] %> <img class="img img-circle nav-user-img" src="<%= user.photo %>" alt=""> <span class="caret"></span></a>
+                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle loggedInDropDown"><img class="img img-circle nav-user-img" src="<%= user.photo %>" alt=""> <%= user.name %> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="/profile">Profile</a></li>
-                            <li><a href="/logout">Log out</a></li>
+                            <li><a href="/profile"><span class="glyphicon glyphicon-user"></span><span class="item-menu">Profile</span></a></li>
+                            <li><a href="/logout"><span class="glyphicon glyphicon-off"></span><span  class="item-menu">Log out</span></a></li>
                         </ul>
                     </li> <% } %>
                 </ul>

@@ -13,11 +13,9 @@
 <div class="agpcontainer">
     <section id="ef-effects" class="page">
 
-
-        <% if(isLoggedIn){ %>
         <div id="chat">
             <div id="chatDiv">
-                <h3>Talk about effects! </h3>
+                <h4>Talk about effects!</h4>
                 <p>People online: </p>
                 <div id="messagesDiv">
                     <ul id="messages">
@@ -33,7 +31,6 @@
                 </form>
             </div>
         </div>
-        <%}%>
 
         <div class="ef-inner">
             <div class="row">
@@ -141,6 +138,12 @@
                                 <div class="ef-description"><%= effect.description %></div>
                                 <div class="ef-type"><%= types.forEach(function(type){if(effect.type==type.id){type.name}}) %></div>
                                 <div class="ef-author"><span class="glyphicon glyphicon-user">  </span><%= effect.author %></div>
+                                <div class="ef-btnDownload">
+                                    <form method="POST" action="/effects">
+                                        <input type="hidden" name="effect[id]" value="<%= effect._id%>">
+                                        <input type="submit" value="Download" class="btn btn-default">
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>

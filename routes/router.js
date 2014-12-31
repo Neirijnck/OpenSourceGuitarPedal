@@ -58,11 +58,22 @@ module.exports = function(app, router, passport)
         })
 
         //Delete own effect
-        .post(isLoggedIn, function(req, res)
+        .post(function(req, res)
         {
-            var effectID = req.body.effect._id;
-            console.log(effectID);
-            //Effect.find({_id: effectID}).remove();
+            var effectID = req.body.effect.id;
+            Effect.find({_id: effectID}).exec(function(err, effect)
+            {
+                var path = './uploads/' + effect[0].file;
+                fs.unlink(path, function(err)
+                {
+                    if(err){console.log(err);}
+                    Effect.remove({_id: effectID}).exec(function(err)
+                    {
+                        if(err){console.log(err);}
+                        res.redirect('/profile');
+                    });
+                });
+            });
         });
 
 
@@ -112,12 +123,12 @@ module.exports = function(app, router, passport)
         //Download selected effect
         .post(function(req, res)
         {
-            var effectID = req.body.effect._id;
+            var effectID = req.body.effect.id;
             console.log(effectID);
             Effect.find({_id: effectID}).exec(function(err, effect)
             {
                 console.log(effect);
-                var path = './uploads/' + effect.file;
+                var path = './uploads/' + effect[0].file;
                 console.log(path);
                 //res.download(path);
             });

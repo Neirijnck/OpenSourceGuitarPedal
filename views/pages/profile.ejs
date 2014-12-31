@@ -10,7 +10,7 @@
     <% include ../partials/header.ejs%>
 </header>
 
-<div class="container" id="profile-container">
+    <div class="container" id="profile-container">
 
     <section id="profile-column">
         <div id="profile-div">
@@ -32,6 +32,62 @@
     <section id="profile-effects">
         <div id="effects">
             <h3>My effects</h3>
+
+            <div class="row ef-item-container">
+                <% myEffects.forEach(function(effect){
+                %>
+                <div class="ef-item col-md-10">
+                    <div class="ef-item-inner">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title ef-name"><%= effect.name %></h4>
+                                <div class="ef-rating">
+                                    <% if(effect.rating == -1){ %>
+                                    <span>No rating</span>
+                                    <% } else {
+                                        var count = 0;
+                                    for(var i=0;i< parseInt(effect.rating);i++){
+                                        count++;
+                                    %>
+                                    <span class=" rating fa fa-star"></span>
+
+                                    <%
+                                    }
+                                    if(effect.rating % 1 > 0.25 && effect.rating % 1 < 0.75){
+                                        count++;
+                                    %>
+                                    <span class="rating fa fa-star-half-empty"></span>
+                                    <%
+                                    }
+                                            while(count < 5){
+                                        count++;
+                                    %>
+                                    <span class="rating fa fa-star-o"></span>
+                                    <%
+                                    }
+                                    }
+                                    %>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="ef-description"><%= effect.description %></div>
+                                <div class="ef-author"><span class="glyphicon glyphicon-user">  </span><%= effect.author %></div>
+                                <div class="ef-btnDownload">
+                                    <form method="post" action="/profile">
+                                        <input type="hidden" name="effect[id]" value="<%= effect._id%>">
+                                        <input type="submit" value="Delete" class="btn btn-default">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <% }); %>
+            </div>
+
 
         </div>
     </section>

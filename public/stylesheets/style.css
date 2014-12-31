@@ -10,12 +10,17 @@ body
 
 /*.navbar-inverse*/
 /*{*/
-    /*background-color: #2c3e50;*/
+    /*background-color: #1F3A93;*/
     /*border: none;*/
 /*}*/
 
+.item-menu
+{
+    padding-left: 15%;
+}
+
 .mainsection {
-    height: 100vh;
+    height: calc(100vh - 50px);
 }
 
 .loggedInDropDown.dropdown-toggle[role="button"] {
@@ -32,6 +37,7 @@ body
 #first {
     background-image: url('../images/crowdblur.jpg');
     position: relative;
+    height: 100vh;
 }
 
 #first   > #overlay {
@@ -95,19 +101,29 @@ h1 {
     max-width: 100%;
 }
 
+.ef-item-container
+{
+    margin-top: 1%;
+}
+
 .ef-item {
     padding: 0;
 }
 
 .ef-item-inner {
-    margin-top: 5px;
-    margin-left: 5px;
+    padding: 5px;
     border-radius: 5px;
 }
 
+.ef-item-inner h3
+{
+    font-weight: bold;
+    margin-left: 5px;
+}
+
 #ef-effects {
-    background: url('../images/pattern.png');
-    color: black;
+    /*background: url('../images/pattern.png');*/
+    background-color: #4B77BE;
 }
 
 .ef-inner{
@@ -115,13 +131,15 @@ h1 {
     /*margin: 0 auto;*/
     margin-left: 2%;
     width: calc(96% - 230px);
-    min-height: 500px;
+    min-height: calc(100vh - 50px);
     margin-top: 50px;
     padding: 10px 5px 5px;
 }
 
 .ef-rating {
     text-align: right;
+    margin-right: 2%;
+    margin-top: 1%;
 }
 
 .ef-description {
@@ -129,7 +147,8 @@ h1 {
 }
 
 .ef-author {
-    text-align: right;
+    float: left;
+margin-left:5%;
 }
 
 .ef-author > span {
@@ -140,6 +159,12 @@ h1 {
     float: left;
 }
 
+.ef-btnDownload
+{
+    float: right;
+    width: 22%;
+    margin-top: -2%;
+}
 
 .rating {
     color: #FFD203;
@@ -153,14 +178,16 @@ h1 {
     right: 0;
     height: calc(100vh - 50px);
     width: 230px;
-    background-color: #222;
+    background-color: #4B77BE;
     z-index: 100;
 }
 
-#chat h3, p
+#chat h4, #chat p
 {
     text-align: center;
     color: white;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 #chatDiv

@@ -73,6 +73,7 @@ io.on('connection', function(socket)
     //Sending message
     socket.on('chat message', function(msg)
     {
+        //var obj = {color: socket.color, id:socket.id, msg: msg};
         io.emit('chat message', msg);
     });
 
