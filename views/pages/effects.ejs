@@ -16,7 +16,7 @@
         <div id="chat">
             <div id="chatDiv">
                 <h4>Talk about effects!</h4>
-                <p>People online: </p>
+                <p id="nrClients">People online: </p>
                 <div id="messagesDiv">
                     <ul id="messages">
                     </ul>
@@ -136,7 +136,7 @@
                             </div>
                             <div class="panel-body">
                                 <div class="ef-description"><%= effect.description %></div>
-                                <div class="ef-type"><%= types.forEach(function(type){if(effect.type==type.id){type.name}}) %></div>
+                                <div class="ef-type"><%= types.forEach(function(type){if(type._id==effect.type){type.name}}) %></div>
                                 <div class="ef-author"><span class="glyphicon glyphicon-user">  </span><%= effect.author %></div>
                                 <div class="ef-btnDownload">
                                     <form method="POST" action="/effects">
@@ -156,10 +156,6 @@
         </div>
     </section>
 </div>
-
-
-
-
 
 <!--
     <table class="table">
@@ -208,6 +204,7 @@ if(effect.rating % 1 > 0.25 && effect.rating % 1 < 0.75){
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
 <script src="../javascript/script.js"></script>
 
 <script src="/socket.io/socket.io.js" ></script>

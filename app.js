@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var multer = require('multer');
+var User = require('./models/user');
 
 //Configure express app
 var app = express();
@@ -66,22 +67,38 @@ var io = require('socket.io').listen(server);
 
 
 //IO
+var clients = [];
+
 io.on('connection', function(socket)
 {
-    console.log('user connected');
+        clients.push(socket);
+        console.log('user connected');
+        io.emit('nrClients', clients.length);
 
-    //Sending message
-    socket.on('chat message', function(msg)
+    socket.on('login', function(username)
     {
-        //var obj = {color: socket.color, id:socket.id, msg: msg};
-        io.emit('chat message', msg);
+        User.findOne({'name' : username}, function(err, foundUser)
+        {
+           var loggedInUser = foundUser;
+            setHandlers(loggedInUser);
+        });
     });
 
-    //Disconnecting
-    socket.on('disconnect', function()
-    {
-        console.log('user disconnected');
-    });
+    function setHandlers(loggedInUser) {
+        //Sending message
+        socket.on('chat message', function (msg) {
+            var obj = {user: loggedInUser, msg: msg};
+            io.emit('chat message', JSON.stringify(obj));
+        });
+    }
+
+        //Disconnecting
+        socket.on('disconnect', function () {
+            clients.splice(clients.indexOf(socket), 1)
+            console.log('user disconnected');
+            io.emit('nrClients', clients.length);
+        });
+
 });
 
 console.log('Server started at http://127.0.0.1: ' + port);

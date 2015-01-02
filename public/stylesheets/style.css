@@ -1,9 +1,13 @@
+/* Custom CSS
+-------------------------------------------------- */
 body
 {
     font-family: 'Source Sans Pro', sans-serif;
     color: #505050;
 }
 
+/* Navigation
+-------------------------------------------------- */
 #container {
     position: relative;
 }
@@ -34,6 +38,8 @@ body
     margin: 0;
 }
 
+/* Index
+-------------------------------------------------- */
 #first {
     background-image: url('../images/crowdblur.jpg');
     position: relative;
@@ -89,6 +95,8 @@ h1 {
     background-color: deepskyblue;
 }
 
+/* Effects Page
+-------------------------------------------------- */
 .panel-heading {
     padding: 5px;
     padding-bottom: 15px;
@@ -122,8 +130,8 @@ h1 {
 }
 
 #ef-effects {
-    /*background: url('../images/pattern.png');*/
-    background-color: #4B77BE;
+    background: url('../images/pattern.png');
+    background-size: 100%;
 }
 
 .ef-inner{
@@ -178,7 +186,6 @@ margin-left:5%;
     right: 0;
     height: calc(100vh - 50px);
     width: 230px;
-    background-color: #4B77BE;
     z-index: 100;
 }
 
@@ -232,10 +239,26 @@ margin-left:5%;
     padding-left: 2%;
 }
 
-#messages > li:nth-of-type(2n){
-    background-color:  #333;
-    
-} 
+.media-object
+{
+    width: 40px;
+    float:left;
+    margin-top: 15px;
+}
+
+.media-body {
+    float: left;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.media {
+    margin-top: 15px;
+}
+
+.page-header {
+    margin-top: 0px;
+}
 
 #sendMessageButton {
     background-color: transparent;
@@ -244,9 +267,10 @@ margin-left:5%;
     width: 33px;
     height: 33px;
     padding: 0;
-    
 }
 
+/* Profile Page
+-------------------------------------------------- */
 #profile-container
 {
     margin-top: 50px;

@@ -127,10 +127,16 @@ module.exports = function(app, router, passport)
             console.log(effectID);
             Effect.find({_id: effectID}).exec(function(err, effect)
             {
-                console.log(effect);
-                var path = './uploads/' + effect[0].file;
-                console.log(path);
-                //res.download(path);
+                if(err)
+                {
+                        res.render('pages/error.ejs');
+                }
+                else
+                {
+                    var path = './uploads/' + effect[0].file;
+                    console.log(path);
+                    res.download(path);
+                }
             });
         });
 
