@@ -10,9 +10,13 @@
     <% include ../partials/header.ejs%>
 </header>
 
-
-<h3>Oops! Something went wrong...</h3>
-
+<div id="error">
+    <div id="error-content">
+        <h2>Oops! Something went wrong...</h2>
+        <img src="/images/error.png" width="75px">
+        <h3><%= message %></h3>
+    </div>
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

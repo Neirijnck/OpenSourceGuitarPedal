@@ -14,8 +14,8 @@ body
 
 /*.navbar-inverse*/
 /*{*/
-    /*background-color: #1F3A93;*/
-    /*border: none;*/
+/*background-color: #1F3A93;*/
+/*border: none;*/
 /*}*/
 
 .item-menu
@@ -36,6 +36,12 @@ body
     height: 40px;
     width: 40px;
     margin: 0;
+}
+
+a
+{
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 /* Index
@@ -156,7 +162,7 @@ h1 {
 
 .ef-author {
     float: left;
-margin-left:5%;
+    margin-left:5%;
 }
 
 .ef-author > span {
@@ -376,5 +382,30 @@ margin-left:5%;
     margin-top: 60px;
 }
 
+/* Error Page
+-------------------------------------------------- */
+#error
+{
+    width: 100%;
+    height: calc(100vh - 50px);
+    margin-top: 50px;
+    background-color: #4f4f4f;
+    text-align: center;
+    color: white;
+}
 
+#error-content
+{
+    padding-top: 10%;
+}
+
+#error h2
+{
+    font-weight: bold;
+}
+
+#error h2, #error h3
+{
+    text-transform: uppercase;
+}
 

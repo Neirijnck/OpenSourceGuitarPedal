@@ -5,6 +5,7 @@ var Type = require('../models/type');
 
 //Modules
 var fs = require('fs');
+var path = require('path');
 
 //Routes
 module.exports = function(app, router, passport)
@@ -49,6 +50,7 @@ module.exports = function(app, router, passport)
                     console.log(err);
                 } else
                 {
+                    //Find the effects for the logged in user
                     Effect.find({author:user.name}).exec(function(err, myEffects)
                     {
                         res.render('pages/profile.ejs', {user: user, isLoggedIn: loggedIn, title: 'My Profile', myEffects: myEffects});
@@ -67,6 +69,7 @@ module.exports = function(app, router, passport)
                 fs.unlink(path, function(err)
                 {
                     if(err){console.log(err);}
+                    //Remove it from database
                     Effect.remove({_id: effectID}).exec(function(err)
                     {
                         if(err){console.log(err);}
@@ -94,10 +97,12 @@ module.exports = function(app, router, passport)
                     }
                     else
                     {
+                        //Get all the effects from database
                         Effect.find(function(err, effects)
                         {
                             if(err){console.log(err);}
 
+                            //Get all the types from database
                             Type.find(function(err, types)
                             {
                                 if(err){console.log(err);}
@@ -125,17 +130,28 @@ module.exports = function(app, router, passport)
         {
             var effectID = req.body.effect.id;
             console.log(effectID);
+
+            //Find the desired effect in database
             Effect.find({_id: effectID}).exec(function(err, effect)
             {
                 if(err)
                 {
-                        res.render('pages/error.ejs');
+                    res.render('pages/error.ejs');
                 }
                 else
                 {
-                    var path = './uploads/' + effect[0].file;
-                    console.log(path);
-                    res.download(path);
+                    //Find path via effect property
+                    var file = './uploads/' + effect[0].file;
+                    console.log(file);
+
+                    var filename = path.basename(file);
+                    res.setHeader('Content-disposition', 'attachment; filename=' + filename);
+
+                    //Download desired effect
+                    var filestream = fs.createReadStream(file);
+                    filestream.pipe(res);
+
+                    //res.download(path);
                 }
             });
         });
@@ -174,6 +190,7 @@ module.exports = function(app, router, passport)
                 }
                 else
                 {
+                    //Add new effect with properties from form
                     var effect = new Effect();
                     effect.name = req.body.effect.name;
                     effect.description = req.body.effect.description;
@@ -182,6 +199,7 @@ module.exports = function(app, router, passport)
                     effect.author = user.name;
                     effect.file = req.files.fileEffect.name;
 
+                    //Save effect in database
                     effect.save(function(err)
                     {
                         if (err)
@@ -262,4 +280,26 @@ module.exports = function(app, router, passport)
     });
 
     app.use('/', router);
+
+
+    //Catch 404 and forward to error handler
+    app.use(function (req, res, next) {
+        var err = new Error('Not Found');
+        err.status = 404;
+        next(err);
+    });
+
+    //Error handler
+    app.use(function (err, req, res, next)
+    {
+        var loggedIn = Boolean(req.isAuthenticated());
+
+        res.status(err.status || 500);
+        res.render('pages/error', {
+            message: err.message,
+            error: {},
+            title: 'Error',
+            isLoggedIn: loggedIn
+        });
+    });
 };

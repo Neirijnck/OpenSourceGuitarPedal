@@ -17,12 +17,12 @@ var port = process.env.PORT||8080;
 //Set the view engine to ejs
 app.set('view engine', 'ejs');
 
-// configure bodyParser to Express
+//Configure bodyParser to Express
 app.use(bodyParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//Configure routers
+//Configure router
 var router = express.Router();
 
 //Configure database connection
@@ -65,21 +65,21 @@ require('./routes/router')(app, router, passport);
 var server = app.listen(port);
 var io = require('socket.io').listen(server);
 
-
 //IO
 var clients = [];
 
+//IO callbacks
 io.on('connection', function(socket)
 {
-        clients.push(socket);
-        console.log('user connected');
-        io.emit('nrClients', clients.length);
+    clients.push(socket);
+    console.log('user connected');
+    io.emit('nrClients', clients.length);
 
     socket.on('login', function(username)
     {
         User.findOne({'name' : username}, function(err, foundUser)
         {
-           var loggedInUser = foundUser;
+            var loggedInUser = foundUser;
             setHandlers(loggedInUser);
         });
     });
@@ -92,12 +92,12 @@ io.on('connection', function(socket)
         });
     }
 
-        //Disconnecting
-        socket.on('disconnect', function () {
-            clients.splice(clients.indexOf(socket), 1)
-            console.log('user disconnected');
-            io.emit('nrClients', clients.length);
-        });
+    //Disconnecting
+    socket.on('disconnect', function () {
+        clients.splice(clients.indexOf(socket), 1)
+        console.log('user disconnected');
+        io.emit('nrClients', clients.length);
+    });
 
 });
 

@@ -1,6 +1,8 @@
+//DB variables
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+//Make schema for effect
 var EffectSchema = new Schema(
     {
         name: {type: String},

@@ -1,3 +1,4 @@
+//Auth holds information about the facebook app
 var auth =
 {
     'facebookAuth' : {

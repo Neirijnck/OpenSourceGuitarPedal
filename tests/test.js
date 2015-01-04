@@ -1,4 +1,6 @@
 /*-- unit testing op basis van assert en should module ----*/
+
+//Variables
 var http = require('http');
 var assert = require("assert");
 var should = require('should');
@@ -12,7 +14,7 @@ var socketURL = 'http://127.0.0.1:8080';
 describe('Database', function(){
 
     before(function(done) {
-        // In our tests we use the test db
+        //In our tests we use our db
         mongoose.connect('mongodb://127.0.0.1:27017/' + 'guitarpedaldb');
         done();
     });
