@@ -6,6 +6,11 @@ body
     color: #505050;
 }
 
+h1, h2, h3, h4
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
 /* Navigation
 -------------------------------------------------- */
 #container {
@@ -21,6 +26,7 @@ body
 .item-menu
 {
     padding-left: 15%;
+    font-weight: bolder;
 }
 
 .mainsection {
@@ -78,11 +84,11 @@ h1 {
 }
 
 #second {
-    background-color: #222;
-    background-image: url('../images/background3.png');
-    background-size: 46%;
-    background-position: center left;
-    background-repeat: no-repeat;
+    background-color: #505459;
+    /*background-image: url('../images/background3.png');*/
+    /*background-size: 46%;*/
+    /*background-position: center left;*/
+    /*background-repeat: no-repeat;*/
 }
 
 #second #svgguitar {
@@ -92,13 +98,50 @@ h1 {
 
 #third
 {
-    background-image: url('../images/background2.png');
-    background-size: 100%;
+    background-color: #4f4f4f;
 }
 
-#fourth
+#creators
 {
-    background-color: deepskyblue;
+    margin-left: auto ;
+    margin-right: auto ;
+    width: 55%;
+    height: 30%;
+}
+
+.creator
+{
+    width: 150px;
+    border: 3px solid white;
+}
+
+.team-member
+{
+    float: left;
+    text-align: center;
+    margin-top: 2%;
+    width: 33.333%;
+    height: 100%;
+    color: white;
+}
+
+.team-member-name
+{
+    text-transform: uppercase;
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+
+.team-member a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.team-member a:hover
+{
+    text-decoration: none;
+    color:#222;
 }
 
 /* Effects Page
@@ -195,12 +238,13 @@ h1 {
     z-index: 100;
 }
 
-#chat h4, #chat p
+#chat p
 {
-    text-align: center;
     color: white;
+    margin-top: 3%;
     text-transform: uppercase;
     font-weight: bold;
+    margin-left: 3%;
 }
 
 #chatDiv
@@ -213,7 +257,7 @@ h1 {
 #chatForm
 {
     position:absolute;
-    bottom: 5%;
+    bottom: 6%;
     width: 250px;
 }
 

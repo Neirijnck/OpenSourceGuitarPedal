@@ -60,7 +60,7 @@ module.exports = function(passport)
                         newUser.profileUrl = profile.profileUrl;
                         newUser.gender = profile.gender;
                         newUser.birthday = profile.birthday;
-                        newUser.location = profile.location;
+                        //newUser.location = profile.location.name;
                         //newUser.userName = profile.username;
 
                         //Save our user to the database

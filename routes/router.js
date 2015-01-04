@@ -218,7 +218,7 @@ module.exports = function(app, router, passport)
 
     //Facebook authentication and login
     router.route('/auth/facebook').get(
-        passport.authenticate('facebook', { session: true, scope: [ 'email', 'user_birthday' ] }), function(err, user, info)
+        passport.authenticate('facebook', { session: true, scope: [ 'email', 'user_birthday', 'user_location' ] }), function(err, user, info)
         {
             if (err) { console.log(err); }
             if (!user) { return res.redirect('/'); }

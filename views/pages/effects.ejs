@@ -15,18 +15,18 @@
 
         <div id="chat">
             <div id="chatDiv">
-                <h4>Talk about effects!</h4>
-                <p id="nrClients">People online: </p>
+                <p><span class="fa fa-comments fa-lg"></span>Chat about effects!</p>
                 <div id="messagesDiv">
                     <ul id="messages">
                     </ul>
                 </div>
+                <p id="nrClients" >People online: </p>
                 <form id="chatForm" class="form-inline">
                     <div class="form-group">
                         <input type="text" id="m" class="form-control" placeholder="Write your message..." required/>
                     </div>
                     <button type="submit" class="btn btn-default" id="sendMessageButton">
-                        <span class="glyphicon glyphicon-send"></span>
+                        <span class="fa fa-send"></span>
                     </button>
                 </form>
             </div>
@@ -136,8 +136,8 @@
                             </div>
                             <div class="panel-body">
                                 <div class="ef-description"><%= effect.description %></div>
-                                <div class="ef-type"><%= types.forEach(function(type){if(type._id==effect.type){type.name}}) %></div>
-                                <div class="ef-author"><span class="glyphicon glyphicon-user">  </span><%= effect.author %></div>
+                                <div class="ef-type"><span class="fa fa-folder-open"></span> <%= types.forEach(function(type){if(type._id==effect.type){type.name}}) %></div>
+                                <div class="ef-author"><span class="fa fa-user">  </span><%= effect.author %></div>
                                 <div class="ef-btnDownload">
                                     <form method="POST" action="/effects">
                                         <input type="hidden" name="effect[id]" value="<%= effect._id%>">
