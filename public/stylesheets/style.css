@@ -17,11 +17,12 @@ h1, h2, h3, h4
     position: relative;
 }
 
-/*.navbar-inverse*/
-/*{*/
-/*background-color: #1F3A93;*/
-/*border: none;*/
-/*}*/
+.navbar-inverse
+{
+    /*background-color: #64BAAD;*/
+    border: none;
+    background: url("../images/menu_bg.jpg") repeat scroll left top
+}
 
 .item-menu
 {
@@ -44,10 +45,41 @@ h1, h2, h3, h4
     margin: 0;
 }
 
-a
+.navbar-inverse .navbar-nav>li>a
 {
     text-transform: uppercase;
     font-weight: bold;
+    color: #505050;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus
+{
+    /*color: #ffdf8f;*/
+    color: #64BAAD;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus
+{
+    background-color: #64BAAD;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus
+{
+    background-color: #64BAAD;
+}
+
+.footer
+{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background: url("../images/menu_bg.jpg") repeat scroll left top
+}
+
+.footer p
+{
+    padding-top: 1.2%;
+    font-size: 1.1em;
 }
 
 /* Index
@@ -84,21 +116,34 @@ h1 {
 }
 
 #second {
-    background-color: #505459;
-    /*background-image: url('../images/background3.png');*/
-    /*background-size: 46%;*/
-    /*background-position: center left;*/
-    /*background-repeat: no-repeat;*/
+    background-color: #89CBC1;
+    background-image: url('../images/flat_guitar.jpg');
+    background-size: 30%;
+    background-position: center left;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
-#second #svgguitar {
-    max-width: 15%;
-    transform: rotate(30deg);
+#second h2
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
+#second-content
+{
+    position: absolute;
+    width: 65%;
+    height: 94%;
+    left: 32%;
+    top: 3%;
 }
 
 #third
 {
-    background-color: #4f4f4f;
+    background-color: #8baeb0;
+    height: calc(100vh - 110px);
 }
 
 #creators
@@ -141,7 +186,7 @@ h1 {
 .team-member a:hover
 {
     text-decoration: none;
-    color:#222;
+    color:#505050;
 }
 
 /* Effects Page
@@ -149,6 +194,11 @@ h1 {
 .panel-heading {
     padding: 5px;
     padding-bottom: 15px;
+}
+
+.panel
+{
+    margin-bottom: 0px;
 }
 
 .ef-name {
@@ -179,8 +229,10 @@ h1 {
 }
 
 #ef-effects {
-    background: url('../images/pattern.png');
+    background: url('../images/background-effects.png');
     background-size: 100%;
+    background-position: center;
+    background-color: #68C3A3;
 }
 
 .ef-inner{
@@ -236,15 +288,18 @@ h1 {
     height: calc(100vh - 50px);
     width: 230px;
     z-index: 100;
+    padding-left: 20px;
+    border-left: solid 1px white;
 }
 
-#chat p
+.chat-title
 {
     color: white;
     margin-top: 3%;
     text-transform: uppercase;
     font-weight: bold;
     margin-left: 3%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #chatDiv
@@ -263,17 +318,17 @@ h1 {
 
 #messagesDiv
 {
-    margin-left: 1.5%;
+    /*margin-left: 1%;*/
     width: 96.5%;
     height: calc(100% - 140px);
-    border-radius: 5px;
-    border: solid 2px white;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
     overflow-y: scroll;
 }
 
 #m
 {
-    width: 188px;
+    width: 185px;
     margin-left: 1.5%;
 }
 
@@ -316,7 +371,7 @@ h1 {
     color: white;
     width: 33px;
     height: 33px;
-    padding: 0;
+    padding-left:3px;
 }
 
 /* Profile Page
@@ -324,12 +379,22 @@ h1 {
 #profile-container
 {
     margin-top: 50px;
+    height: calc(100vh - 50px);
+    width: 100%;
+    background-image: url('../images/background-profile.png');
+    background-size: 100%;
+    background-color: #8baeb0;
 }
 
 #profile-container h3
 {
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.profile-h
+{
+    color: white;
 }
 
 #profile-column
@@ -351,7 +416,7 @@ h1 {
     margin-left: 7.5%;
     width: 85%;
     height: 30%;
-    border-bottom: solid 1px #9d9d9d;
+    border-bottom: solid 1px white;
     padding-top: 2%;
     padding-bottom: 2%;
 }
@@ -379,7 +444,7 @@ h1 {
     margin-left: 8%;
     width: 85%;
     height: 30%;
-    border-bottom: solid 1px #9d9d9d;
+    border-bottom: solid 1px white;
 }
 
 #profile-effects
@@ -392,7 +457,7 @@ h1 {
 
 #effects
 {
-    margin: 1.80%;
+    margin: 1%;
     width: 96%;
     height: 95%;
     border-radius: 10px;
@@ -401,7 +466,7 @@ h1 {
 #effects h3
 {
     margin: 2%;
-    border-bottom: solid 1px #9d9d9d;
+    border-bottom: solid 1px white;
 }
 
 #profile-column img
@@ -421,9 +486,56 @@ h1 {
     text-align: center;
 }
 
+
+/* New Effect Page
+-------------------------------------------------- */
 #new-effect-container
 {
-    margin-top: 60px;
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+    width: 100%;
+    background-image: url('../images/background.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#new-effect-content
+{
+    float: left;
+    width: 70%;
+    height: 90%;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+#new-effect-container h2
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
+#new-effect-container form
+{
+    width: 50%;
+    margin-top: 7%;
+}
+
+#new-effect-container input, #new-effect-container select
+{
+    margin: 1%;
+}
+
+#new-effect-container textarea
+{
+    resize: none;
+    margin: 1%;
+    height: 100px;
+}
+
+#new-effect-container label
+{
+    color: white;
 }
 
 /* Error Page
@@ -431,16 +543,16 @@ h1 {
 #error
 {
     width: 100%;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 110px);
     margin-top: 50px;
-    background-color: #4f4f4f;
+    background-color: #89CBC1;
     text-align: center;
     color: white;
 }
 
 #error-content
 {
-    padding-top: 10%;
+    padding-top: 9%;
 }
 
 #error h2
@@ -453,3 +565,64 @@ h1 {
     text-transform: uppercase;
 }
 
+#error-nav
+{
+    border-top: solid 1px white;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+#error-nav p
+{
+    margin: 2%;
+}
+
+#error-nav ul
+{
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#error-nav li
+{
+    float: left;
+    margin: 2%;
+    font-size: 1.3em;
+}
+
+#error-nav a
+{
+    text-decoration: none;
+    padding: 10px;
+    color: #ffffff;
+}
+
+#error-nav a:hover
+{
+    color: #505050;
+}
+
+
+/* Scrollbar
+-------------------------------------------------- */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 12px;
+}
+::-webkit-scrollbar-track-piece {
+    background: white;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #505050;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-corner       {
+    background: #505050;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #505050;
+}

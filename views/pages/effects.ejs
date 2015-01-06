@@ -15,12 +15,12 @@
 
         <div id="chat">
             <div id="chatDiv">
-                <p><span class="fa fa-comments fa-lg"></span>Chat about effects!</p>
+                <p class="chat-title"><span class="fa fa-comments fa-lg"></span>Chat about effects!</p>
                 <div id="messagesDiv">
                     <ul id="messages">
                     </ul>
                 </div>
-                <p id="nrClients" >People online: </p>
+                <p class="chat-title" id="nrClients" >People online: </p>
                 <form id="chatForm" class="form-inline">
                     <div class="form-group">
                         <input type="text" id="m" class="form-control" placeholder="Write your message..." required/>
@@ -91,7 +91,7 @@
                 </div>
 
                 <div class="btn-group pull-right" role="group">
-                    <a href="/neweffect"><button type="button" class="btn btn-success">Add effect</button></a>
+                    <a href="/neweffect"><button type="button" class="btn btn-default">Add effect</button></a>
                 </div>
             </div>
 
@@ -198,7 +198,6 @@ if(effect.rating % 1 > 0.25 && effect.rating % 1 < 0.75){
 %></td>
             </tr> <% }); %>
     </table>-->
-
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

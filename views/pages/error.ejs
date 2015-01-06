@@ -12,11 +12,27 @@
 
 <div id="error">
     <div id="error-content">
-        <h2>Oops! Something went wrong...</h2>
-        <img src="/images/error.png" width="75px">
-        <h3><%= message %></h3>
+        <h2>Oops!</h2>
+        <h3>Something went wrong...</h3>
+        <img src="/images/error.png" width="65px">
+        <h4><%= message %></h4>
+
+        <nav id="error-nav">
+            <p>Navigate back to one of these pages:</p>
+            <ul style="<%if(isLoggedIn){%> width: 350px <%}else{%> width: 250px <%}%>">
+                <li><a href="/">Home</a></li>
+                <li><a href="/effects">Effects</a></li>
+                <%if(isLoggedIn){%><li><a href="/profile">Profile</a></li><%}%>
+            </ul>
+        </nav>
+
     </div>
 </div>
+
+
+<footer>
+    <% include ../partials/footer.ejs %>
+</footer>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

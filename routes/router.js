@@ -27,11 +27,11 @@ module.exports = function(app, router, passport)
                 if (err) {
                     console.log(err);
                 } else {
-                    res.render('pages/index.ejs', {user: user, isLoggedIn: loggedIn, title: 'Home'});
+                    res.render('pages/index.ejs', {user: user, isLoggedIn: loggedIn, title: 'Home | Arduino Guitar Pedal'});
                 }
             });
         }
-        else{res.render('pages/index.ejs', {isLoggedIn: loggedIn, title: 'Home'});}
+        else{res.render('pages/index.ejs', {isLoggedIn: loggedIn, title: 'Home | Arduino Guitar Pedal'});}
     });
 
     //Profile page
@@ -53,7 +53,7 @@ module.exports = function(app, router, passport)
                     //Find the effects for the logged in user
                     Effect.find({author:user.name}).exec(function(err, myEffects)
                     {
-                        res.render('pages/profile.ejs', {user: user, isLoggedIn: loggedIn, title: 'My Profile', myEffects: myEffects});
+                        res.render('pages/profile.ejs', {user: user, isLoggedIn: loggedIn, title: 'My Profile | Arduino Guitar Pedal', myEffects: myEffects});
                     });
                 }
             });
@@ -106,7 +106,7 @@ module.exports = function(app, router, passport)
                             Type.find(function(err, types)
                             {
                                 if(err){console.log(err);}
-                                res.render('pages/effects.ejs', {effects : effects, types : types, isLoggedIn : loggedIn, user: user, title: 'Effects'})
+                                res.render('pages/effects.ejs', {effects : effects, types : types, isLoggedIn : loggedIn, user: user, title: 'Effects | Arduino Guitar Pedal'})
                             });
                         });
                     }})}
@@ -119,7 +119,7 @@ module.exports = function(app, router, passport)
                     Type.find(function(err, types)
                     {
                         if(err){console.log(err);}
-                        res.render('pages/effects.ejs', {effects : effects, types : types, isLoggedIn : loggedIn, title: 'Effects'})
+                        res.render('pages/effects.ejs', {effects : effects, types : types, isLoggedIn : loggedIn, title: 'Effects | Arduino Guitar Pedal'})
                     });
                 });
             }
@@ -177,7 +177,7 @@ module.exports = function(app, router, passport)
                         if (err) {
                             console.log(err);
                         }
-                        res.render('pages/neweffect.ejs', {types: types, isLoggedIn: loggedIn, user: user, title: 'New Effect'});
+                        res.render('pages/neweffect.ejs', {types: types, isLoggedIn: loggedIn, user: user, title: 'New Effect | Arduino Guitar Pedal'});
                     }})
             })
         })
@@ -282,6 +282,11 @@ module.exports = function(app, router, passport)
     app.use('/', router);
 
 
+
+    // =====================================
+    // ERROR HANDLING =====================
+    // =====================================
+
     //Catch 404 and forward to error handler
     app.use(function (req, res, next) {
         var err = new Error('Not Found');
@@ -295,11 +300,21 @@ module.exports = function(app, router, passport)
         var loggedIn = Boolean(req.isAuthenticated());
 
         res.status(err.status || 500);
-        res.render('pages/error', {
-            message: err.message,
-            error: {},
-            title: 'Error',
-            isLoggedIn: loggedIn
+
+        User.findOne(req.user, function(error, user) {
+            if (error) {
+                console.log(error);
+            }
+            else
+            {
+                res.render('pages/error', {
+                    message: err.message,
+                    error: {},
+                    title: 'Error | Arduino Guitar Pedal',
+                    isLoggedIn: loggedIn,
+                    user: user
+                });
+            }
         });
     });
 };

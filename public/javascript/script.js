@@ -86,7 +86,7 @@ $(document).ready(function(){
 
     socket.on('nrClients', function(nrClients)
     {
-        $('#nrClients').text('People currently online:  ' + nrClients);
+        $('#nrClients').text('People online:  ' + nrClients);
     });
 
     function scrollToBottom () {

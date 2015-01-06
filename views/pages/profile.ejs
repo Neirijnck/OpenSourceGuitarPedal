@@ -10,89 +10,91 @@
     <% include ../partials/header.ejs%>
 </header>
 
-<div class="container" id="profile-container">
+<div id="profile-container">
 
-    <section id="profile-column">
-        <div id="profile-div">
-            <div id="userPicture">
-                <a href="<%= user.profileUrl%>"><img class="img" src="<%=user.photo%>"/></a>
-                <h3 id="titleName"><%=user.name%></h3>
+    <div class="container">
+        <section id="profile-column">
+            <div id="profile-div">
+                <div id="userPicture">
+                    <a href="<%= user.profileUrl%>"><img class="img" src="<%=user.photo%>"/></a>
+                    <h3 class="profile-h" id="titleName"><%=user.name%></h3>
+                </div>
+                <div id="userProps">
+                    <h4 class="profile-h" ><span class="fa fa-envelope profile-icon" aria-hidden="true"></span><%= user.email%></h4>
+                    <h4 class="profile-h" ><span class="fa fa-user profile-icon" aria-hidden="true"></span><%= user.gender%></h4>
+                    <h4 class="profile-h" ><span class="fa fa-map-marker profile-icon" aria-hidden="true"></span><%= user.location%></h4>
+                </div>
+                <div id="totalEffects">
+                    <h3 class="profile-h" ><%= myEffects.length%></h3>
+                    <h4 class="profile-h" ><span class="fa fa-flash"></span> Effects</h4>
+                </div>
             </div>
-            <div id="userProps">
-                <h4><span class="fa fa-envelope profile-icon" aria-hidden="true"></span><%= user.email%></h4>
-                <h4><span class="fa fa-user profile-icon" aria-hidden="true"></span><%= user.gender%></h4>
-                <h4><span class="fa fa-map-marker profile-icon" aria-hidden="true"></span><%= user.location%></h4>
-            </div>
-            <div id="totalEffects">
-                <h3><%= myEffects.length%></h3>
-                <h4><span class="fa fa-flash"></span> Effects</h4>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="profile-effects">
-        <div id="effects">
-            <h3>My effects</h3>
+        <section id="profile-effects">
+            <div id="effects">
+                <h3 class="profile-h" >My effects</h3>
 
-            <div class="row ef-item-container">
-                <% myEffects.forEach(function(effect){
-                %>
-                <div class="ef-item col-md-10">
-                    <div class="ef-item-inner">
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <h4 class="panel-title ef-name"><%= effect.name %></h4>
-                                <div class="ef-rating">
-                                    <% if(effect.rating == -1){ %>
-                                    <span>No rating</span>
-                                    <% } else {
-                                        var count = 0;
-                                    for(var i=0;i< parseInt(effect.rating);i++){
-                                        count++;
-                                    %>
-                                    <span class=" rating fa fa-star"></span>
+                <div class="row ef-item-container">
+                    <% myEffects.forEach(function(effect){
+                    %>
+                    <div class="ef-item col-md-10">
+                        <div class="ef-item-inner">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title ef-name"><%= effect.name %></h4>
+                                    <div class="ef-rating">
+                                        <% if(effect.rating == -1){ %>
+                                        <span>No rating</span>
+                                        <% } else {
+                                            var count = 0;
+                                        for(var i=0;i< parseInt(effect.rating);i++){
+                                            count++;
+                                        %>
+                                        <span class=" rating fa fa-star"></span>
 
-                                    <%
-                                    }
-                                    if(effect.rating % 1 > 0.25 && effect.rating % 1 < 0.75){
-                                        count++;
-                                    %>
-                                    <span class="rating fa fa-star-half-empty"></span>
-                                    <%
-                                    }
-                                            while(count < 5){
-                                        count++;
-                                    %>
-                                    <span class="rating fa fa-star-o"></span>
-                                    <%
-                                    }
-                                    }
-                                    %>
+                                        <%
+                                        }
+                                        if(effect.rating % 1 > 0.25 && effect.rating % 1 < 0.75){
+                                            count++;
+                                        %>
+                                        <span class="rating fa fa-star-half-empty"></span>
+                                        <%
+                                        }
+                                                while(count < 5){
+                                            count++;
+                                        %>
+                                        <span class="rating fa fa-star-o"></span>
+                                        <%
+                                        }
+                                        }
+                                        %>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="panel-body">
-                                <div class="ef-description"><%= effect.description %></div>
-                                <div class="ef-author"><span class="fa fa-user">  </span><%= effect.author %></div>
-                                <div class="ef-btnDownload">
-                                    <form method="post" action="/profile">
-                                        <input type="hidden" name="effect[id]" value="<%= effect._id%>">
-                                        <input type="submit" value="Delete" class="btn btn-default">
-                                    </form>
+                                <div class="panel-body">
+                                    <div class="ef-description"><%= effect.description %></div>
+                                    <div class="ef-author"><span class="fa fa-user">  </span><%= effect.author %></div>
+                                    <div class="ef-btnDownload">
+                                        <form method="post" action="/profile">
+                                            <input type="hidden" name="effect[id]" value="<%= effect._id%>">
+                                            <input type="submit" value="Delete" class="btn btn-danger">
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
+
+                    <% }); %>
                 </div>
 
 
-
-                <% }); %>
             </div>
+        </section>
 
-
-        </div>
-    </section>
-
+    </div>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

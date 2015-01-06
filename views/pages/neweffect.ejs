@@ -9,24 +9,32 @@
     <% include ../partials/header.ejs%>
 </header>
 
-<div class="container" id="new-effect-container">
+<div id="new-effect-container">
 
+    <div id="new-effect-content">
+        <h2>Add a new effect!</h2>
     <form method="post" action="/neweffect" enctype="multipart/form-data">
         <div class="form-group">
-            <input type="text"  class="form-control" placeholder="Name" required="true" name="effect[name]">
-            <input type="text" class="form-control" placeholder="Description" required="true" name="effect[description]">
 
-            <select name="effect[type]" class="form-control" required="true">
+            <label for="effect-name">Name:</label>
+            <input id="effect-name" type="text"  class="form-control" placeholder="Name" required="true" name="effect[name]">
+
+            <label for="effect-description">Description:</label>
+            <textarea id="effect-description" type="text" class="form-control" placeholder="Description" required="true" name="effect[description]"></textarea>
+
+            <label for="effect-type">Type:</label>
+            <select id="effect-type" name="effect[type]" class="form-control" required="true">
                 <% types.forEach(function(type){ %>
                 <option value="<%= type._id %>"><%= type.name %></option>
                 <%});%>
             </select>
 
-            <input type="file" class="form-control" accept=".ino, .zip" required="true" name="fileEffect">
+            <label for="effect-file">File (.ino | .zip):</label>
+            <input id="effect-file" type="file" class="form-control" accept=".ino, .zip" required="true" name="fileEffect">
         </div>
         <input type="submit" value="Save" class="btn btn-default">
     </form>
-
+    </div>
 </div>
 
 
