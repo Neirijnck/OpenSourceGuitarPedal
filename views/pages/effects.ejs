@@ -21,7 +21,7 @@
                     </ul>
                 </div>
                 <p class="chat-title" id="nrClients" >People online: </p>
-                <form id="chatForm" class="form-inline">
+                    <form id="chatForm" class="form-inline">
                     <div class="form-group">
                         <input type="text" id="m" class="form-control" placeholder="Write your message..." required/>
                     </div>
@@ -136,7 +136,7 @@
                             </div>
                             <div class="panel-body">
                                 <div class="ef-description"><%= effect.description %></div>
-                                <div class="ef-type"><span class="fa fa-folder-open"></span> <%= types.forEach(function(type){if(type._id==effect.type){type.name}}) %></div>
+                                <div class="ef-type"><span class="fa fa-folder-open"></span> <%= types.forEach(function(type){if(type._id== 'ObjectId("'+effect.type + '")'){type.name}}); %></div>
                                 <div class="ef-author"><span class="fa fa-user">  </span><%= effect.author %></div>
                                 <div class="ef-btnDownload">
                                     <form method="POST" action="/effects">
