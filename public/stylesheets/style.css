@@ -129,21 +129,47 @@ h1 {
     text-transform: uppercase;
     font-weight: bold;
     color: white;
+    margin: 5%;
 }
 
 #second-content
 {
     position: absolute;
-    width: 65%;
+    width: 40%;
     height: 94%;
     left: 32%;
     top: 3%;
+}
+
+#second-text
+{
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-left: 6%;
+    margin-top: 8%;
+    width: 80%;
 }
 
 #third
 {
     background-color: #8baeb0;
     height: calc(100vh - 110px);
+}
+
+#third-text
+{
+    margin-left: auto ;
+    margin-right: auto ;
+    padding-top: 2%;
+    width: 55%;
+    height: 40%;
+    text-align: center;
+}
+
+#third-text p
+{
+    font-size: 1.2em;
+    color: #ffffff;
 }
 
 #creators

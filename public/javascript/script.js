@@ -22,7 +22,7 @@ $(document).ready(function(){
     function removeWrongEffects(elem, type, rating){
         //check both type and rating
         if(elem.find('.ef-rating').find('.fa-star').length >= rating){
-            if(elem.find('.ef-type').html() == type || type == "All types"){
+            if(elem.find('.ef-type').html() == '<span class="fa fa-folder-open"></span> '+type || type == "All types"){
                 elem.css("display","block");
             }
             else {

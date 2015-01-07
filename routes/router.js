@@ -154,6 +154,34 @@ module.exports = function(app, router, passport)
                     //res.download(path);
                 }
             });
+        })
+
+        //Update effect rating
+        .put(function(req,res)
+        {
+            var effectID = req.body.effect.id;
+            var rating = req.body.effect.rating;
+
+            console.log(rating);
+
+            //Find the desired effect in database
+            Effect.find({_id: effectID}).exec(function(err, effect)
+            {
+                if (err) {
+                    res.render('pages/error.ejs');
+                }
+                else
+                {
+                    effect.rating = rating;
+
+                    //Save updated effect in database
+                    effect.save(function(err)
+                    {
+                        if (err)
+                            return res.send(err);
+                    });
+                }
+            });
         });
 
 
