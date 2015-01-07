@@ -104,6 +104,11 @@ $(document).ready(function(){
         var media = document.createElement('div');
         media.className = "media";
 
+        var triangle = document.createElement('span');
+        triangle.className = "media-object-triangle";
+
+        media.appendChild(triangle);
+
         var avatar = document.createElement('img');
         avatar.src = obj.user.photo;
         avatar.className = "media-object img-square";
