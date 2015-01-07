@@ -60,6 +60,7 @@ module.exports = function(passport)
                         newUser.profileUrl = profile.profileUrl;
                         newUser.gender = profile.gender;
                         newUser.birthday = profile.birthday;
+                        newUser.userName = profile.name.givenName + Date.now();
                         if(profile._json.location!=undefined) {
                             newUser.location = profile._json.location.name;
                         }else{newUser.location = "unknown";}
