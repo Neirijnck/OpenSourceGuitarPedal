@@ -18,7 +18,6 @@ var port = process.env.PORT||8080;
 app.set('view engine', 'ejs');
 
 //Configure bodyParser to Express
-app.use(bodyParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -26,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var router = express.Router();
 
 //Configure database connection
-var connectionString = 'mongodb://127.0.0.1:27017/' + 'guitarpedaldb';
+var connectionString = process.env.MONGO_DB || 'mongodb://127.0.0.1:27017/guitarpedaldb';
 mongoose.connect(connectionString);
 
 //Connection callbacks
@@ -35,8 +34,8 @@ mongoose.connection.on('open', function()
     console.log('Connection met mongoserver: ' + connectionString);
     mongoose.connection.db.collectionNames(function(err, names)
     {
-        console.log('Collection list:');
-        console.log(names);
+        //console.log('Collection list:');
+        //console.log(names);
     });
 
 });
@@ -69,7 +68,7 @@ var io = require('socket.io').listen(server);
 var clients = [];
 
 //IO callbacks
-io.on('connection', function(socket)
+io.sockets.on('connection', function(socket)
 {
     clients.push(socket);
     console.log('user connected');
