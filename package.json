@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "An open source platform used for uploading sound effects on a arduino guitar pedal.",
   "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js"
+  },
   "dependencies": {
     "body-parser": "^1.10.0",
     "busboy": "^0.2.9",
@@ -27,6 +30,9 @@
     "should": "^4.4.2",
     "socket.io-client": "^1.2.1",
     "utf8": "^2.0.0"
+  },
+  "engines": {
+    "node": "0.10.x"
   },
   "repository": {
     "type": "git",

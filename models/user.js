@@ -9,7 +9,7 @@ var UserSchema = new Schema(
         facebookToken:{type: String},
         email: {type: String, index: { unique: true }},
         password: {type: String},
-        //userName:{type: String, index: { unique: true }},
+        userName:{type: String},
         name:{type: String},
         profileUrl:{type: String},
         photo:{type: String},

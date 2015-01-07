@@ -60,8 +60,10 @@ module.exports = function(passport)
                         newUser.profileUrl = profile.profileUrl;
                         newUser.gender = profile.gender;
                         newUser.birthday = profile.birthday;
-                        newUser.location = profile._json.location.name
-                        //newUser.userName = profile.username;
+                        if(profile._json.location!=undefined) {
+                            newUser.location = profile._json.location.name;
+                        }else{newUser.location = "unknown";}
+
 
                         //Save our user to the database
                         newUser.save(function (err) {
