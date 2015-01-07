@@ -1,7 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0960af4-933b-4cc4-8fca-c6d3f183facd" name="Default" comment="" />
+    <list default="true" id="f0960af4-933b-4cc4-8fca-c6d3f183facd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/after/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/arraybuffer.slice/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/base64-arraybuffer/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/blob/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/after/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/base64-arraybuffer/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/blob/.zuul.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/after/LICENCE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/LICENSE-GPL.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/base64-arraybuffer/LICENSE-MIT" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/arraybuffer.slice/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/blob/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/after/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/base64-arraybuffer/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/blob/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/.bin/_mocha.cmd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/.bin/_mocha" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/after/test/after-test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/base64-arraybuffer/lib/base64-arraybuffer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/base64-arraybuffer/test/base64-arraybuffer_test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/builderror.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/tests/generate-test-data.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/base64-arraybuffer/grunt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/coverage/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/coverage/utf8.js/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/tests/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/test/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/after/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/arraybuffer.slice/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/blob/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/blob/test/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/.bin/mocha.cmd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/test/mocha.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/test/mocha.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/.bin/mocha" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/options/lib/options.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/after/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/arraybuffer.slice/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/blob/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/coverage/prettify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/coverage/prettify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/arraybuffer.slice/test/slice-buffer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/has-cors/node_modules/global/test/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/tests/tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/coverage/utf8.js/utf8.js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/utf8.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/.bin/wscat.cmd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/.bin/wscat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/x.js" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\History.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\Makefile" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\index.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\lib\client.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\lib\index.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\lib\namespace.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\lib\socket.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\debug\Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\debug\debug.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\debug\index.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\debug\lib\debug.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\debug\package.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\History.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\Makefile" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\index.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\lib\engine.io.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\lib\server.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\lib\socket.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\lib\transport.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\lib\transports\index.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\lib\transports\polling-jsonp.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\lib\transports\polling-xhr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\lib\transports\polling.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\lib\transports\websocket.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\History.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\Makefile" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\binding.gyp" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\builderror.log" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\index.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\lib\BufferPool.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\lib\BufferUtil.fallback.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\lib\BufferUtil.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\lib\ErrorCodes.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\lib\Receiver.hixie.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\lib\Receiver.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\lib\Sender.hixie.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\lib\Sender.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\lib\Validation.fallback.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\lib\Validation.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\lib\WebSocket.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\lib\WebSocketServer.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\lib\browser.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\node_modules\nan\.dntrc" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\node_modules\nan\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\node_modules\nan\appveyor.yml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\node_modules\nan\build\config.gypi" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\node_modules\nan\include_dirs.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\node_modules\nan\nan.h" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\node_modules\nan\nan.h.orig" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\node_modules\nan\package.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\node_modules\ultron\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\node_modules\ultron\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\node_modules\ultron\index.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\node_modules\ultron\package.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\node_modules\ultron\test.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\package.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\src\bufferutil.cc" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\src\validation.cc" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\wscat\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\wscat\bin\wscat" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\wscat\package.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\package.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\package.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\LICENSE" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/utf8/LICENSE-MIT.txt" />
+      <change type="MOVED" beforePath="D:\Preben\School\Howest\Jaar 3\Vakken\Backend Development\Project\Backend Project\OpenSourceGuitarPedal\node_modules\socket.io\node_modules\engine.io\node_modules\ws\node_modules\nan\LICENSE.md" afterPath="$PROJECT_DIR$/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/engine.io-parser/node_modules/arraybuffer.slice/README.md" />
+    </list>
     <ignored path="OpenSourceGuitarPedal.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,99 +163,7 @@
     <favorites_list name="OpenSourceGuitarPedal" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="effects.ejs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/pages/effects.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79826087" vertical-offset="1972" max-vertical-offset="3876">
-              <caret line="143" column="102" selection-start-line="143" selection-start-column="102" selection-end-line="143" selection-end-column="102" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/partials/header.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="731">
-              <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pattern.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/images/pattern.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nathan.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/images/nathan.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="preben.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/images/preben.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/router.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1862" max-vertical-offset="5525">
-              <caret line="121" column="152" selection-start-line="121" selection-start-column="122" selection-end-line="121" selection-end-column="152" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="effect.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/effect.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="type.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/type.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289">
-              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascript/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="2499">
-              <caret line="120" column="50" selection-start-line="120" selection-start-column="50" selection-end-line="120" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="927" max-vertical-offset="11339">
-              <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -134,10 +182,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -191,10 +239,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -280,20 +324,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenSourceGuitarPedal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenSourceGuitarPedal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -306,14 +336,10 @@
     <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <method />
-    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -321,6 +347,10 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -359,17 +389,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16358839" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -377,9 +405,11 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -403,6 +433,77 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/views/pages/effects.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5016">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/header.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="946">
+          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/pattern.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/nathan.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/preben.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2662" max-vertical-offset="7150">
+          <caret line="121" column="152" selection-start-line="121" selection-start-column="122" selection-end-line="121" selection-end-column="152" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/effect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/type.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="374">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascript/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2640" max-vertical-offset="3234">
+          <caret line="120" column="50" selection-start-line="120" selection-start-column="50" selection-end-line="120" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1474" max-vertical-offset="14674">
+          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/effects.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3876">
@@ -479,6 +580,22 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="927" max-vertical-offset="11339">
+          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/effects.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.225806" vertical-offset="3146" max-vertical-offset="5016">
+          <caret line="156" column="14" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/images/pattern.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -494,58 +611,42 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/effect.js">
+    <entry file="file://$PROJECT_DIR$/public/javascript/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.39761904" vertical-offset="2394" max-vertical-offset="3234">
+          <caret line="124" column="43" selection-start-line="124" selection-start-column="43" selection-end-line="124" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/type.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascript/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="2499">
-          <caret line="120" column="50" selection-start-line="120" selection-start-column="50" selection-end-line="120" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="927" max-vertical-offset="11339">
-          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1862" max-vertical-offset="5525">
-          <caret line="121" column="152" selection-start-line="121" selection-start-column="122" selection-end-line="121" selection-end-column="152" />
+        <state vertical-scroll-proportion="0.28809524" vertical-offset="0" max-vertical-offset="840">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/partials/header.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="731">
-          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.8341709" vertical-offset="150" max-vertical-offset="946">
+          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/effects.ejs">
+    <entry file="file://$PROJECT_DIR$/models/effect.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79826087" vertical-offset="1972" max-vertical-offset="3876">
-          <caret line="143" column="102" selection-start-line="143" selection-start-column="102" selection-end-line="143" selection-end-column="102" />
+        <state vertical-scroll-proportion="0.41904762" vertical-offset="0" max-vertical-offset="840">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44523808" vertical-offset="2662" max-vertical-offset="7150">
+          <caret line="138" column="50" selection-start-line="138" selection-start-column="50" selection-end-line="138" selection-end-column="50" />
           <folding />
         </state>
       </provider>
