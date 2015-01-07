@@ -68,7 +68,7 @@ $(document).ready(function(){
 
     var socket = io.connect("http://127.0.0.1:8080/");
 
-    socket.emit('login', "Preben Neirijnck");
+    socket.emit('login', "anonymous");
 
     $('#chatForm').submit(function()
     {
@@ -105,8 +105,9 @@ $(document).ready(function(){
 
         var avatar = document.createElement('img');
         avatar.src = obj.user.photo;
-        avatar.className = "media-object img-circle";
+        avatar.className = "media-object img-square";
         avatar.alt = obj.user.name;
+        avatar.title = obj.user.name;
 
         media.appendChild(avatar);
 
@@ -120,7 +121,7 @@ $(document).ready(function(){
         var author = document.createElement('small');
         author.className = "text-muted";
         var date = new Date();
-        author.appendChild(document.createTextNode(obj.user.name + " | " + (date.getHours() < 10 ? '0' : '') + date.getHours() + ":" + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes()));
+        author.appendChild(document.createTextNode((date.getHours() < 10 ? '0' : '') + date.getHours() + ":" + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes()));
         media_body_message.appendChild(author);
 
         media.appendChild(media_body_message);

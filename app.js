@@ -77,11 +77,19 @@ io.on('connection', function(socket)
 
     socket.on('login', function(username)
     {
-        User.findOne({'name' : username}, function(err, foundUser)
+        if(username=="anonymous")
         {
-            var loggedInUser = foundUser;
-            setHandlers(loggedInUser);
-        });
+            var anonymousUser = new User();
+            anonymousUser.photo = "../images/user-icon.png";
+            anonymousUser.name = "anonymous";
+            setHandlers(anonymousUser);
+        }
+        else {
+            User.findOne({'name': username}, function (err, foundUser) {
+                var loggedInUser = foundUser;
+                setHandlers(loggedInUser);
+            });
+        }
     });
 
     function setHandlers(loggedInUser) {
