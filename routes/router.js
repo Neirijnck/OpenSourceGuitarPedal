@@ -174,8 +174,6 @@ module.exports = function(app, router, passport)
             var effectID = req.body.id;
             var rating = req.body.rating;
 
-            console.log(rating);
-
             //Find the desired effect in database
             Effect.find({_id: effectID}).exec(function(err, effect)
             {
@@ -184,10 +182,12 @@ module.exports = function(app, router, passport)
                 }
                 else
                 {
-                    effect.rating = rating;
+                    //console.log(effect[0]);
+                    effect[0].rating = rating;
+                    effect[0].timesRated = effect[0].timesRated+1;
 
                     //Save updated effect in database
-                    effect.save(function(err)
+                    effect[0].save(function(err)
                     {
                         if (err)
                             console.log(err);
