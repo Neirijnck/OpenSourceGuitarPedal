@@ -21,9 +21,6 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//Configure router
-var router = express.Router();
-
 //Configure database connection
 var connectionString = process.env.MONGO_DB || 'mongodb://127.0.0.1:27017/guitarpedaldb';
 mongoose.connect(connectionString);
@@ -56,6 +53,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(multer({dest:'./uploads/', rename: function (fieldname, filename) {
     return filename + Date.now()
 }}));
+
+//Configure router
+var router = express.Router();
 
 //Require the routes
 require('./routes/router')(app, router, passport);
