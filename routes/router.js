@@ -190,7 +190,7 @@ module.exports = function(app, router, passport)
                     effect.save(function(err)
                     {
                         if (err)
-                            return res.send(err);
+                            console.log(err);
                     });
                 }
             });
@@ -235,6 +235,7 @@ module.exports = function(app, router, passport)
                     effect.name = req.body.effect.name;
                     effect.description = req.body.effect.description;
                     effect.rating = -1; //Default not rated yet
+                    effect.timesRated = 0; //Default not rated yet
                     effect.type = req.body.effect.type; //This should be id of the type
                     effect.author = user.name;
                     effect.file = req.files.fileEffect.name;

@@ -9,6 +9,7 @@ var EffectSchema = new Schema(
         description:{type: String},
         date:{type: Date, default: Date.now},
         rating:{type: Number},
+        timesRated:{type: Number},
         type:{type: String},
         author:{type: String},
         file:{type: String}
