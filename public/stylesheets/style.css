@@ -270,6 +270,7 @@ h1 {
     padding: 0;
 }
 
+
 .ef-item-profile
 {
     width: 100%;
@@ -280,17 +281,19 @@ h1 {
     border-radius: 5px;
 }
 
-.ef-item-inner h3
-{
+.ef-item-inner h3 {
     font-weight: bold;
     margin-left: 5px;
 }
 
 #ef-effects {
+    min-height: calc(100vh - 50px);
     background: url('../images/background-effects.png');
     background-size: 100%;
-    background-position: center;
+    background-position: bottom;
+    background-attachment: fixed;
     background-color: #68C3A3;
+    overflow: auto;
 }
 
 .ef-inner{
@@ -301,6 +304,7 @@ h1 {
     min-height: calc(100vh - 50px);
     margin-top: 50px;
     padding: 10px 5px 5px;
+    height: 100%;
 }
 
 .ef-rating {
@@ -584,7 +588,7 @@ h1 {
 #new-effect-container
 {
     margin-top: 50px;
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
     width: 100%;
     background-image: url('../images/background.png');
     background-size: 100%;
