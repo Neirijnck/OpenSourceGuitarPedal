@@ -129,41 +129,52 @@ h1 {
     text-transform: uppercase;
     font-weight: bold;
     color: white;
-    margin: 5%;
+    margin: 3%;
 }
 
 #second-content
 {
     position: absolute;
-    width: 40%;
+    width: 67%;
     height: 94%;
     left: 32%;
     top: 3%;
+}
+
+#second-guitar
+{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
 }
 
 #second-text
 {
     font-size: 1.2em;
     color: #ffffff;
-    margin-left: 6%;
-    margin-top: 8%;
-    width: 80%;
+    margin-left: 4%;
+    margin-top: 3%;
+    width: 35%;
+    float: left;
 }
 
 #third
 {
     background-color: #8baeb0;
     height: calc(100vh - 110px);
+    background-image: url('../images/amp.png');
+    background-size: 12%;
+    background-position: 30% 7%;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 #third-text
 {
-    margin-left: auto ;
-    margin-right: auto ;
-    padding-top: 2%;
-    width: 55%;
+    margin-left: 42%;
+    padding-top: 4%;
+    width: 30%;
     height: 40%;
-    text-align: center;
 }
 
 #third-text p
