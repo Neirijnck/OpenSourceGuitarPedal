@@ -167,7 +167,7 @@ $(document).ready(function(){
             var html = "";
             var count = 0;
             if (newScore >= 1) {
-                for (i = 0; i < newScore - 1; i++) {
+                for (i = 0; i < newScore; i++) {
                     html += '<span class="rating fa fa-star"><span>';
                     count++;
                 }
