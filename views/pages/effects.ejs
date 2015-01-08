@@ -106,13 +106,9 @@
                         <div class="panel">
                             <div class="panel-heading">
                                 <h3 class="panel-title ef-name"><%= effect.name %></h3>
-                                <div class="ef-rating">
+                                <div class="ef-rating canRate">
                                     <% if(effect.rating == -1){ %>
-                                    <span class="rating fa fa-star-o"></span>
-                                    <span class="rating fa fa-star-o"></span>
-                                    <span class="rating fa fa-star-o"></span>
-                                    <span class="rating fa fa-star-o"></span>
-                                    <span class="rating fa fa-star-o"></span>
+                                        <span>no rating</span>
                                     <% } else {
                                         var count = 0;
                                     for(var i=0;i< parseInt(effect.rating);i++){
@@ -127,8 +123,7 @@
                                     %>
                                     <span class="rating fa fa-star-half-empty"></span>
                                     <%
-                                    }
-                                            while(count < 5){
+                                    }while(count < 5){
                                         count++;
                                     %>
                                     <span class="rating fa fa-star-o"></span>
@@ -136,6 +131,8 @@
                                     }
                                     }
                                     %>
+                                    <span class="timesRated">( <%= effect.timesRated %> )</span>
+                                    <input type="hidden" class="ratinghidden" name="rating" value="<%= effect.rating %>">
                                 </div>
                             </div>
                             <div class="panel-body">

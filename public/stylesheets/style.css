@@ -313,6 +313,9 @@ h1 {
     margin-top: 1%;
     display: inline-block;
     float: right;
+}
+
+.canRate {
     cursor: pointer;
 }
 
@@ -344,11 +347,11 @@ h1 {
     font-size: 18px;
 }
 
-.ef-rating:hover .rating:before {
+.canRate:hover .rating:before {
     content: "\f005";
 }
 
-.rating:hover ~ .rating:before {
+.canRate .rating:hover ~ .rating:before {
     content:"\f006";
     /* fontAwesome filled star code */
 }

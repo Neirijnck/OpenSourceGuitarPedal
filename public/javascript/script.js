@@ -140,17 +140,55 @@ $(document).ready(function(){
     }
 
     $('.ef-rating').on('click', '.rating', function () {
-        var score = $(this).index() + 1;
-        var id = $(this).parent().parent().next().find('input[type="hidden"]').attr('value');
+        if($(this).parent().hasClass('canRate')) {
+            $(this).parent().attr('class','ef-rating');
+            var elem = $(this);
+            var score = elem.index() + 1;
+            elem = elem.parent();
+            var id = elem.parent().next().find('input[type="hidden"]').attr('value');
+            var ratings = elem.children('.timesRated').text().split(" ")[1];
+            var prevScore = elem.children('.ratinghidden').attr('value');
+            var newScore = 0;
+            newScore = ratings * prevScore;
+            newScore += score;
+            ratings = parseFloat(ratings) + 1;
+            newScore = newScore / ratings;
 
-        $.ajax({
-            url: '/effects',
-            type: 'PUT',
-            data: "id=" + id + "&rating=" + score,
-            success: function(response) {
-                alert('hey');
+            $.ajax({
+                url: '/effects',
+                type: 'PUT',
+                data: "id=" + id + "&rating=" + newScore,
+                success: function (response) {
+                }
+            });
+
+            elem.children('.fa-star, .fa-star-o, .fa-star-half-empty').remove();
+            var i;
+            var html = "";
+            var count = 0;
+            if (newScore >= 1) {
+                for (i = 0; i < newScore - 1; i++) {
+                    html += '<span class="rating fa fa-star"><span>';
+                    count++;
+                }
             }
-        });
+            if (newScore % 1 > 0.25 && newScore % 1 < 0.75) {
+                html += '<span class="rating fa fa-star-half-empty"><span>';
+                count++;
+            } else if (newScore % 1 > 0.75) {
+                html += '<span class="rating fa fa-star"><span>';
+                count++;
+            }
+
+            while (count < 5) {
+                html += '<span class="rating fa fa-star-o"><span>';
+                count++;
+            }
+            elem.prepend(html);
+
+            elem.children('.timesRated').text('( ' + ratings + ' )');
+            elem.children('.ratinghidden').attr('value', newScore);
+        }
     });
 
 });
