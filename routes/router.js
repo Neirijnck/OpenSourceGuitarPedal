@@ -264,22 +264,22 @@ module.exports = function(app, router, passport)
     // =====================================
 
     //Facebook authentication and login
-    router.route('/auth/facebook').get(
+    router.route('/auth/facebook').get(function(req,res){
         passport.authenticate('facebook', { session: true, scope: [ 'email', 'user_birthday', 'user_location' ] }), function(err, user, info)
         {
             if (err) { console.log(err); }
             if (!user) { return res.redirect(req.session.lastPage); }
             req.logIn(user);
-        }
+        }}
     );
 
     //Handle the callback after facebook has authenticated the user
-    router.route('/auth/facebook/callback').get(
+    router.route('/auth/facebook/callback').get(function(req,res){
         passport.authenticate('facebook', {
             session: true,
             successRedirect:req.session.lastPage,
             failureRedirect:req.session.lastPage
-        }));
+        })});
 
     //Route for logging out
     router.route('/logout').get(function(req, res) {
