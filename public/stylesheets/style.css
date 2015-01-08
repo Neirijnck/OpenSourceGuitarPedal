@@ -311,6 +311,9 @@ h1 {
     text-align: right;
     margin-right: 2%;
     margin-top: 1%;
+    display: inline-block;
+    float: right;
+    cursor: pointer;
 }
 
 .ef-description {
@@ -339,6 +342,15 @@ h1 {
 .rating {
     color: #FFD203;
     font-size: 18px;
+}
+
+.ef-rating:hover .rating:before {
+    content: "\f005";
+}
+
+.rating:hover ~ .rating:before {
+    content:"\f006";
+    /* fontAwesome filled star code */
 }
 
 #chat

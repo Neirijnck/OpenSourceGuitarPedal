@@ -139,4 +139,18 @@ $(document).ready(function(){
         scrollToBottom();
     }
 
+    $('.ef-rating').on('click', '.rating', function () {
+        var score = $(this).index() + 1;
+        var id = $(this).parent().parent().next().find('input[type="hidden"]').attr('value');
+
+        $.ajax({
+            url: '/effects',
+            type: 'PUT',
+            data: "id=" + id + "&rating=" + score,
+            success: function(response) {
+                alert('hey');
+            }
+        });
+    });
+
 });

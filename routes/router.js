@@ -171,8 +171,8 @@ module.exports = function(app, router, passport)
         //Update effect rating
         .put(function(req,res)
         {
-            var effectID = req.body.effect.id;
-            var rating = req.body.effect.rating;
+            var effectID = req.body.id;
+            var rating = req.body.rating;
 
             console.log(rating);
 
@@ -194,6 +194,7 @@ module.exports = function(app, router, passport)
                     });
                 }
             });
+
         });
 
 

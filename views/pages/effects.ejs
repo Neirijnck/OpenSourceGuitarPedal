@@ -108,7 +108,11 @@
                                 <h3 class="panel-title ef-name"><%= effect.name %></h3>
                                 <div class="ef-rating">
                                     <% if(effect.rating == -1){ %>
-                                    <span>No rating</span>
+                                    <span class="rating fa fa-star-o"></span>
+                                    <span class="rating fa fa-star-o"></span>
+                                    <span class="rating fa fa-star-o"></span>
+                                    <span class="rating fa fa-star-o"></span>
+                                    <span class="rating fa fa-star-o"></span>
                                     <% } else {
                                         var count = 0;
                                     for(var i=0;i< parseInt(effect.rating);i++){
