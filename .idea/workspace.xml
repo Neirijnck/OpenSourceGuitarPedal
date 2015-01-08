@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0960af4-933b-4cc4-8fca-c6d3f183facd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/effect.js" afterPath="$PROJECT_DIR$/models/effect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/router.js" afterPath="$PROJECT_DIR$/routes/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/auth.js" afterPath="$PROJECT_DIR$/config/auth.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OpenSourceGuitarPedal.iws" />
@@ -31,8 +30,8 @@
       <file leaf-file-name="router.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55" vertical-offset="4752" max-vertical-offset="8052">
-              <caret line="237" column="66" selection-start-line="237" selection-start-column="66" selection-end-line="237" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.51666665" vertical-offset="5440" max-vertical-offset="8052">
+              <caret line="267" column="6" selection-start-line="267" selection-start-column="6" selection-end-line="267" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -54,6 +53,7 @@
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/models/effect.js" />
         <option value="$PROJECT_DIR$/routes/router.js" />
+        <option value="$PROJECT_DIR$/config/auth.js" />
       </list>
     </option>
   </component>
@@ -185,6 +185,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenSourceGuitarPedal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenSourceGuitarPedal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -192,7 +206,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../../../Downloads/node-project -StritzelFabrice-SwimbergheNiels" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../../../Downloads/node-project-VandendriesscheCedric/Piano" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="FullScreen" value="false" />
   </component>
@@ -390,7 +404,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420712904555</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Code - V4.2 - Changes effect model for rating">
+      <created>1420720532772</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1420720532772</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -438,7 +458,8 @@
     <MESSAGE value="Code - V3.9 - Content on index page, added edit method for effect rating" />
     <MESSAGE value="Code - V4.0 - Profile page done" />
     <MESSAGE value="Design - V4.1 - Index page done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Design - V4.1 - Index page done" />
+    <MESSAGE value="Code - V4.2 - Changes effect model for rating" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code - V4.2 - Changes effect model for rating" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -674,10 +695,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70714283" vertical-offset="0" max-vertical-offset="2552">
+          <caret line="27" column="89" selection-start-line="27" selection-start-column="89" selection-end-line="27" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/passport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62857145" vertical-offset="0" max-vertical-offset="1892">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18333334" vertical-offset="0" max-vertical-offset="840">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55" vertical-offset="4752" max-vertical-offset="8052">
-          <caret line="237" column="66" selection-start-line="237" selection-start-column="66" selection-end-line="237" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.51666665" vertical-offset="5440" max-vertical-offset="8052">
+          <caret line="267" column="6" selection-start-line="267" selection-start-column="6" selection-end-line="267" selection-end-column="6" />
           <folding />
         </state>
       </provider>
