@@ -17,10 +17,6 @@ var port = process.env.PORT||8080;
 //Set the view engine to ejs
 app.set('view engine', 'ejs');
 
-//Configure bodyParser to Express
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
 //Configure database connection
 var connectionString = process.env.MONGO_DB || 'mongodb://127.0.0.1:27017/guitarpedaldb';
 mongoose.connect(connectionString);
@@ -44,6 +40,8 @@ mongoose.connection.on('error', function(err)
 require('./config/passport')(passport); //Pass passport for configuration
 
 //All environments
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(session({ secret: 'guitarpedal', saveUninitialized: true, resave: true, key: 'user', cookie: { maxAge: 24*60*60*1000, secure: false }}));
 app.use(passport.initialize());

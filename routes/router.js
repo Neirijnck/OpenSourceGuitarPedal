@@ -18,6 +18,8 @@ module.exports = function(app, router, passport)
     //Homepage
     router.route('/').get(function(req, res)
     {
+        req.session.lastPage='/';
+
         var loggedIn = Boolean(req.isAuthenticated());
 
         //When logged in, pass user to view
@@ -38,6 +40,7 @@ module.exports = function(app, router, passport)
     router.route('/profile')
 
         .get(isLoggedIn, function(req, res) {
+            req.session.lastPage='/profile';
 
             console.log(req.user);
             var loggedIn = Boolean(req.isAuthenticated());
@@ -98,6 +101,7 @@ module.exports = function(app, router, passport)
         //Get all effects
         .get(function(req,res)
         {
+            req.session.lastPage='/effects';
             var loggedIn = Boolean(req.isAuthenticated());
 
             //When logged in, pass user to view
@@ -203,6 +207,7 @@ module.exports = function(app, router, passport)
 
         .get(isLoggedIn, function(req,res)
         {
+            req.session.lastPage='/neweffect';
             Type.find(function(err, types)
             {
 
@@ -263,7 +268,7 @@ module.exports = function(app, router, passport)
         passport.authenticate('facebook', { session: true, scope: [ 'email', 'user_birthday', 'user_location' ] }), function(err, user, info)
         {
             if (err) { console.log(err); }
-            if (!user) { return res.redirect('/'); }
+            if (!user) { return res.redirect(req.session.lastPage); }
             req.logIn(user);
         }
     );
@@ -272,14 +277,14 @@ module.exports = function(app, router, passport)
     router.route('/auth/facebook/callback').get(
         passport.authenticate('facebook', {
             session: true,
-            successRedirect:'/',
-            failureRedirect : '/'
+            successRedirect:req.session.lastPage,
+            failureRedirect:req.session.lastPage
         }));
 
     //Route for logging out
     router.route('/logout').get(function(req, res) {
         req.logout();
-        res.redirect('/');
+        res.redirect(req.session.lastPage);
     });
 
     //Route middleware to make sure a user is logged in
