@@ -35,10 +35,14 @@
             <div id="effects">
                 <h3 class="profile-h" >My effects</h3>
 
+                <div class="btn-group pull-right" id="profile-add-effect" role="group">
+                    <a href="/neweffect"><button type="button" class="btn btn-default">Add effect</button></a>
+                </div>
+
                 <div class="row ef-item-container">
                     <% myEffects.forEach(function(effect){
                     %>
-                    <div class="ef-item col-md-10">
+                    <div class="ef-item ef-item-profile">
                         <div class="ef-item-inner">
                             <div class="panel">
                                 <div class="panel-heading">
@@ -73,6 +77,7 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="ef-description"><%= effect.description %></div>
+                                    <div class="ef-type"><span class="fa fa-folder-open"></span> <% types.forEach(function(type){if(type._id== effect.type){%><%=type.name%><%}}) %></div>
                                     <div class="ef-author"><span class="fa fa-user">  </span><%= effect.author %></div>
                                     <div class="ef-btnDownload">
                                         <form method="post" action="/profile">

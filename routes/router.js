@@ -53,7 +53,19 @@ module.exports = function(app, router, passport)
                     //Find the effects for the logged in user
                     Effect.find({author:user.name}).exec(function(err, myEffects)
                     {
-                        res.render('pages/profile.ejs', {user: user, isLoggedIn: loggedIn, title: 'My Profile | Arduino Guitar Pedal', myEffects: myEffects});
+                        //Get all the types from database
+                        Type.find(function(err, types) {
+                            if (err) {
+                                console.log(err);
+                            }
+                            res.render('pages/profile.ejs', {
+                                user: user,
+                                isLoggedIn: loggedIn,
+                                title: 'My Profile | Arduino Guitar Pedal',
+                                myEffects: myEffects,
+                                types: types
+                            });
+                        });
                     });
                 }
             });
