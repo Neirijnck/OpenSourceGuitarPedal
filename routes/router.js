@@ -154,16 +154,16 @@ module.exports = function(app, router, passport)
                 {
                     //Find path via effect property
                     var file = './uploads/' + effect[0].file;
-                    console.log(file);
+                    //console.log(file);
+                    //
+                    //var filename = path.basename(file);
+                    //res.setHeader('Content-disposition', 'attachment; filename=' + filename);
+                    //
+                    ////Download desired effect
+                    //var filestream = fs.createReadStream(file);
+                    //filestream.pipe(res);
 
-                    var filename = path.basename(file);
-                    res.setHeader('Content-disposition', 'attachment; filename=' + filename);
-
-                    //Download desired effect
-                    var filestream = fs.createReadStream(file);
-                    filestream.pipe(res);
-
-                    //res.download(path);
+                    res.download(file);
                 }
             });
         })
