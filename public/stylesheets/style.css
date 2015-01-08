@@ -454,9 +454,13 @@ h1 {
 #profile-container
 {
     margin-top: 50px;
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
     width: 100%;
+    /*background-image: url('../images/background-profile.png');*/
     background-image: url('../images/background-profile.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom;
     background-size: 100%;
     background-color: #8baeb0;
 }
@@ -475,9 +479,9 @@ h1 {
 #profile-column
 {
     float: left;
-    margin-left: 5%;
+    /*margin-left: 5%;*/
     height: calc(100vh - 50px);
-    width: 38vh;
+    width: 250px;
     min-width: 250px;
 }
 
@@ -537,9 +541,9 @@ h1 {
 #profile-effects
 {
     float: left;
-    height: calc(100vh - 50px);
-    width: 70%;
-    min-width:750px;
+    min-height: calc(100vh - 50px);
+    width: calc(100% - 250px);
+    /*min-width:750px;*/
 }
 
 #effects
