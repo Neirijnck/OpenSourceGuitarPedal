@@ -45,7 +45,7 @@ require('./config/passport')(passport); //Pass passport for configuration
 
 //All environments
 app.use(cookieParser());
-app.use(session({ secret: 'guitarpedal', key: 'user', cookie: { maxAge: 60000, secure: false }}));
+app.use(session({ secret: 'guitarpedal', saveUninitialized: true, resave: true, key: 'user', cookie: { maxAge: 24*60*60*1000, secure: false }}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(favicon('./public/images/favicon.ico'));
